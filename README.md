@@ -1,5 +1,5 @@
 # Farlight-84
-Farlight 84 SDK
+Farlight 84 SDK [03/08/2023]
 
 Offsets Atualizadas!
 <pre>GWorld: [SolarlandClient-Win64-Shipping.exe+6761CE0]
