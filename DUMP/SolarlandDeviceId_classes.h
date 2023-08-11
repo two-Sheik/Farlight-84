@@ -3,6 +3,6 @@
 struct USolarlandDeviceInfoSettings : UDeveloperSettings {
 	struct FString UserName; // 0x38(0x10)
 
-	struct USolarlandDeviceInfoSettings* GetInstance(); // Function SolarlandDeviceId.SolarlandDeviceInfoSettings.GetInstance // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22cec90
+	struct USolarlandDeviceInfoSettings* GetInstance(); // Function SolarlandDeviceId.SolarlandDeviceInfoSettings.GetInstance // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22cfcd0
 };
 

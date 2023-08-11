@@ -6,13 +6,13 @@ struct UDownloadFileTask : UObject {
 	struct FMulticastInlineDelegate OnDownloadFailed; // 0x48(0x10)
 	char pad_58[0x80]; // 0x58(0x80)
 
-	void StartDownload(); // Function SolarlandResUpdate.DownloadFileTask.StartDownload // (Final|Native|Public|BlueprintCallable) // @ game+0x22d1170
-	void SetSaveToFile(bool InSet); // Function SolarlandResUpdate.DownloadFileTask.SetSaveToFile // (Final|Native|Public|BlueprintCallable) // @ game+0x22d10e0
-	void SetNeedDecode(bool InNeedDecode); // Function SolarlandResUpdate.DownloadFileTask.SetNeedDecode // (Final|Native|Public|BlueprintCallable) // @ game+0x22d1050
-	void SetForceRedownload(bool inForceRedownload); // Function SolarlandResUpdate.DownloadFileTask.SetForceRedownload // (Final|Native|Public|BlueprintCallable) // @ game+0x22d0fc0
-	struct FString GetUrl(); // Function SolarlandResUpdate.DownloadFileTask.GetUrl // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d0f40
-	struct UDownloadFileTask* CreateNoFile(struct FString URL, bool bByChunk); // Function SolarlandResUpdate.DownloadFileTask.CreateNoFile // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22d0e60
-	struct UDownloadFileTask* Create(struct FString URL, struct FString FileDirectory, struct FString Filename, bool bByChunk, bool bForceWrite); // Function SolarlandResUpdate.DownloadFileTask.Create // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22d0c90
+	void StartDownload(); // Function SolarlandResUpdate.DownloadFileTask.StartDownload // (Final|Native|Public|BlueprintCallable) // @ game+0x22d21b0
+	void SetSaveToFile(bool InSet); // Function SolarlandResUpdate.DownloadFileTask.SetSaveToFile // (Final|Native|Public|BlueprintCallable) // @ game+0x22d2120
+	void SetNeedDecode(bool InNeedDecode); // Function SolarlandResUpdate.DownloadFileTask.SetNeedDecode // (Final|Native|Public|BlueprintCallable) // @ game+0x22d2090
+	void SetForceRedownload(bool inForceRedownload); // Function SolarlandResUpdate.DownloadFileTask.SetForceRedownload // (Final|Native|Public|BlueprintCallable) // @ game+0x22d2000
+	struct FString GetUrl(); // Function SolarlandResUpdate.DownloadFileTask.GetUrl // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d1f80
+	struct UDownloadFileTask* CreateNoFile(struct FString URL, bool bByChunk); // Function SolarlandResUpdate.DownloadFileTask.CreateNoFile // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22d1ea0
+	struct UDownloadFileTask* Create(struct FString URL, struct FString FileDirectory, struct FString Filename, bool bByChunk, bool bForceWrite); // Function SolarlandResUpdate.DownloadFileTask.Create // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x22d1cd0
 };
 
 // Class SolarlandResUpdate.SolarlandResUpdater

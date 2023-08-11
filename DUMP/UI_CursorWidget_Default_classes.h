@@ -3,6 +3,6 @@
 struct UUI_CursorWidget_Default_C : UUserWidget {
 	struct UCanvasPanel* CursorCanvas; // 0x260(0x08)
 
-	struct FString GetModuleName(); // Function UI_CursorWidget_Default.UI_CursorWidget_Default_C.GetModuleName // (Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const) // @ game+0x25d85b0
+	struct FString GetModuleName(); // Function UI_CursorWidget_Default.UI_CursorWidget_Default_C.GetModuleName // (Event|Public|HasOutParms|BlueprintCallable|BlueprintEvent|Const) // @ game+0x25d95f0
 };
 

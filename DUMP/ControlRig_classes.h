@@ -41,11 +41,11 @@ struct UControlRigComponent : UActorComponent {
 	struct FMulticastInlineDelegate OnPostEvaluateDelegate; // 0xe0(0x10)
 	struct UControlRig* ControlRig; // 0xf0(0x08)
 
-	void OnPreInitialize(); // Function ControlRig.ControlRigComponent.OnPreInitialize // (Native|Event|Public|BlueprintEvent) // @ game+0x7cb770
-	void OnPreEvaluate(); // Function ControlRig.ControlRigComponent.OnPreEvaluate // (Native|Event|Public|BlueprintEvent) // @ game+0xc28eb0
-	void OnPostInitialize(); // Function ControlRig.ControlRigComponent.OnPostInitialize // (Native|Event|Public|BlueprintEvent) // @ game+0xc28e90
-	void OnPostEvaluate(); // Function ControlRig.ControlRigComponent.OnPostEvaluate // (Native|Event|Public|BlueprintEvent) // @ game+0xc28e70
-	struct UControlRig* BP_GetControlRig(); // Function ControlRig.ControlRigComponent.BP_GetControlRig // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xc28e40
+	void OnPreInitialize(); // Function ControlRig.ControlRigComponent.OnPreInitialize // (Native|Event|Public|BlueprintEvent) // @ game+0x7cc3a0
+	void OnPreEvaluate(); // Function ControlRig.ControlRigComponent.OnPreEvaluate // (Native|Event|Public|BlueprintEvent) // @ game+0xc29da0
+	void OnPostInitialize(); // Function ControlRig.ControlRigComponent.OnPostInitialize // (Native|Event|Public|BlueprintEvent) // @ game+0xc29d80
+	void OnPostEvaluate(); // Function ControlRig.ControlRigComponent.OnPostEvaluate // (Native|Event|Public|BlueprintEvent) // @ game+0xc29d60
+	struct UControlRig* BP_GetControlRig(); // Function ControlRig.ControlRigComponent.BP_GetControlRig // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xc29d30
 };
 
 // Class ControlRig.ControlRigGizmoLibrary

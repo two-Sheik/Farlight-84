@@ -28,7 +28,7 @@ struct UChaosNotifyHandlerInterface : UInterface {
 // Size: 0x28 (Inherited: 0x28)
 struct UChaosSolverEngineBlueprintLibrary : UBlueprintFunctionLibrary {
 
-	struct FHitResult ConvertPhysicsCollisionToHitResult(struct FChaosPhysicsCollisionInfo& PhysicsCollision); // Function ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult // (Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure) // @ game+0x3f14700
+	struct FHitResult ConvertPhysicsCollisionToHitResult(struct FChaosPhysicsCollisionInfo& PhysicsCollision); // Function ChaosSolverEngine.ChaosSolverEngineBlueprintLibrary.ConvertPhysicsCollisionToHitResult // (Final|Native|Static|Public|HasOutParms|BlueprintCallable|BlueprintPure) // @ game+0x3f15740
 };
 
 // Class ChaosSolverEngine.ChaosSolver
@@ -64,8 +64,8 @@ struct AChaosSolverActor : AActor {
 	char pad_290[0x18]; // 0x290(0x18)
 	struct UChaosGameplayEventDispatcher* GameplayEventDispatcherComponent; // 0x2a8(0x08)
 
-	void SetSolverActive(bool bActive); // Function ChaosSolverEngine.ChaosSolverActor.SetSolverActive // (Native|Public|BlueprintCallable) // @ game+0x3f14810
-	void SetAsCurrentWorldSolver(); // Function ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver // (Final|Native|Public|BlueprintCallable) // @ game+0x3f147f0
+	void SetSolverActive(bool bActive); // Function ChaosSolverEngine.ChaosSolverActor.SetSolverActive // (Native|Public|BlueprintCallable) // @ game+0x3f15850
+	void SetAsCurrentWorldSolver(); // Function ChaosSolverEngine.ChaosSolverActor.SetAsCurrentWorldSolver // (Final|Native|Public|BlueprintCallable) // @ game+0x3f15830
 };
 
 // Class ChaosSolverEngine.ChaosSolverSettings

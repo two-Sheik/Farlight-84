@@ -115,14 +115,14 @@ struct AReplicationGraphDebugActor : AActor {
 	struct UReplicationGraph* ReplicationGraph; // 0x228(0x08)
 	struct UNetReplicationGraphConnection* ConnectionManager; // 0x230(0x08)
 
-	void ServerStopDebugging(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80e1d0
-	void ServerStartDebugging(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80e1b0
-	void ServerSetPeriodFrameForClass(struct UObject* Class, int32_t PeriodFrame); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80e0e0
-	void ServerSetCullDistanceForClass(struct UObject* Class, float CullDistance); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80e000
-	void ServerSetConditionalActorBreakpoint(struct AActor* Actor); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80df70
-	void ServerPrintCullDistances(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintCullDistances // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80df50
-	void ServerPrintAllActorInfo(struct FString str); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80deb0
-	void ServerCellInfo(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80de90
-	void ClientCellInfo(struct FVector CellLocation, struct FVector CellExtent, struct TArray<struct AActor*> Actors); // Function ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo // (Net|NetReliableNative|Event|Public|HasDefaults|NetClient) // @ game+0x80dd40
+	void ServerStopDebugging(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStopDebugging // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80ee00
+	void ServerStartDebugging(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerStartDebugging // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80ede0
+	void ServerSetPeriodFrameForClass(struct UObject* Class, int32_t PeriodFrame); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetPeriodFrameForClass // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80ed10
+	void ServerSetCullDistanceForClass(struct UObject* Class, float CullDistance); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetCullDistanceForClass // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80ec30
+	void ServerSetConditionalActorBreakpoint(struct AActor* Actor); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerSetConditionalActorBreakpoint // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80eba0
+	void ServerPrintCullDistances(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintCullDistances // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80eb80
+	void ServerPrintAllActorInfo(struct FString str); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerPrintAllActorInfo // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80eae0
+	void ServerCellInfo(); // Function ReplicationGraph.ReplicationGraphDebugActor.ServerCellInfo // (Net|NetReliableNative|Event|Public|NetServer) // @ game+0x80eac0
+	void ClientCellInfo(struct FVector CellLocation, struct FVector CellExtent, struct TArray<struct AActor*> Actors); // Function ReplicationGraph.ReplicationGraphDebugActor.ClientCellInfo // (Net|NetReliableNative|Event|Public|HasDefaults|NetClient) // @ game+0x80e970
 };
 

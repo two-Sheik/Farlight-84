@@ -25,7 +25,7 @@ struct ABlockoutToolsParent : AActor {
 	bool bBlockoutCastShadows; // 0x2a9(0x01)
 	char pad_2AA[0x6]; // 0x2aa(0x06)
 
-	void RerunConstructionScript(); // Function BlockoutToolsPlugin.BlockoutToolsParent.RerunConstructionScript // (Final|Native|Private|BlueprintCallable) // @ game+0x80f620
-	void BlockoutSetMaterial(); // Function BlockoutToolsPlugin.BlockoutToolsParent.BlockoutSetMaterial // (Final|Native|Private|BlueprintCallable) // @ game+0x80f600
+	void RerunConstructionScript(); // Function BlockoutToolsPlugin.BlockoutToolsParent.RerunConstructionScript // (Final|Native|Private|BlueprintCallable) // @ game+0x810250
+	void BlockoutSetMaterial(); // Function BlockoutToolsPlugin.BlockoutToolsParent.BlockoutSetMaterial // (Final|Native|Private|BlueprintCallable) // @ game+0x810230
 };
 

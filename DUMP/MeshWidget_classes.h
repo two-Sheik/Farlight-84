@@ -19,9 +19,9 @@ struct UMeshRectangleWidget : UMeshWidgetUWidget {
 	int32_t NumFloat4PerInstance; // 0x150(0x04)
 	char pad_154[0x1c]; // 0x154(0x1c)
 
-	void SetInstanceNum(int32_t NewNum); // Function MeshWidget.MeshRectangleWidget.SetInstanceNum // (Final|Native|Public|BlueprintCallable) // @ game+0x15936f0
-	void ModifyInstanceNum(int32_t dNum); // Function MeshWidget.MeshRectangleWidget.ModifyInstanceNum // (Final|Native|Public|BlueprintCallable) // @ game+0x15936f0
-	void InitUnitTestProvider(); // Function MeshWidget.MeshRectangleWidget.InitUnitTestProvider // (Final|Native|Public|BlueprintCallable) // @ game+0x8e9ae0
+	void SetInstanceNum(int32_t NewNum); // Function MeshWidget.MeshRectangleWidget.SetInstanceNum // (Final|Native|Public|BlueprintCallable) // @ game+0x15945e0
+	void ModifyInstanceNum(int32_t dNum); // Function MeshWidget.MeshRectangleWidget.ModifyInstanceNum // (Final|Native|Public|BlueprintCallable) // @ game+0x15945e0
+	void InitUnitTestProvider(); // Function MeshWidget.MeshRectangleWidget.InitUnitTestProvider // (Final|Native|Public|BlueprintCallable) // @ game+0x8ea710
 };
 
 // Class MeshWidget.TextMeshWidget

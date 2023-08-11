@@ -2,7 +2,7 @@
 // Size: 0x28 (Inherited: 0x28)
 struct URawInputFunctionLibrary : UBlueprintFunctionLibrary {
 
-	struct TArray<struct FRegisteredDeviceInfo> GetRegisteredDevices(); // Function RawInput.RawInputFunctionLibrary.GetRegisteredDevices // (Final|Native|Static|Public|BlueprintCallable|BlueprintPure) // @ game+0xbba860
+	struct TArray<struct FRegisteredDeviceInfo> GetRegisteredDevices(); // Function RawInput.RawInputFunctionLibrary.GetRegisteredDevices // (Final|Native|Static|Public|BlueprintCallable|BlueprintPure) // @ game+0xbbb750
 };
 
 // Class RawInput.RawInputSettings
