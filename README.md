@@ -4,7 +4,7 @@ Farlight 84 SDK [11/08/2023]
 Offsets Atualizadas!
 <pre>GWorld: [SolarlandClient-Win64-Shipping.exe+6763160]
 GName:  [SolarlandClient-Win64-Shipping.exe+65F36C0]
-GName: [SolarlandClient-Win64-Shipping.exe+660BF10]
+GUObject: [SolarlandClient-Win64-Shipping.exe+660BF10]
 </pre>
 
 
