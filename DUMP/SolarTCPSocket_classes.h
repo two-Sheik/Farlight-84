@@ -6,8 +6,8 @@ struct ASolarTCPSocketClient : AActor {
 	float TimeBetweenTicks; // 0x230(0x04)
 	char pad_234[0x84]; // 0x234(0x84)
 
-	bool SendData(int32_t ConnectionId, struct TArray<char> Data); // Function SolarTCPSocket.SolarTCPSocketClient.SendData // (Final|Native|Public|BlueprintCallable) // @ game+0x16b2f20
-	void Disconnect(int32_t ConnectionId); // Function SolarTCPSocket.SolarTCPSocketClient.Disconnect // (Final|Native|Public|BlueprintCallable) // @ game+0x16b2e90
-	void Connect(struct FString IP, int32_t Port, struct FDelegate& OnConnected, struct FDelegate& OnDisconnected, struct FDelegate& OnMessageReceived, int32_t& ConnectionId); // Function SolarTCPSocket.SolarTCPSocketClient.Connect // (Final|Native|Public|HasOutParms|BlueprintCallable) // @ game+0x16b2c20
+	bool SendData(int32_t ConnectionId, struct TArray<char> Data); // Function SolarTCPSocket.SolarTCPSocketClient.SendData // (Final|Native|Public|BlueprintCallable) // @ game+0x16b78e0
+	void Disconnect(int32_t ConnectionId); // Function SolarTCPSocket.SolarTCPSocketClient.Disconnect // (Final|Native|Public|BlueprintCallable) // @ game+0x16b7850
+	void Connect(struct FString IP, int32_t Port, struct FDelegate& OnConnected, struct FDelegate& OnDisconnected, struct FDelegate& OnMessageReceived, int32_t& ConnectionId); // Function SolarTCPSocket.SolarTCPSocketClient.Connect // (Final|Native|Public|HasOutParms|BlueprintCallable) // @ game+0x16b75e0
 };
 

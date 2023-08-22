@@ -4,7 +4,7 @@ struct URichtapController : UObject {
 	char pad_28[0x18]; // 0x28(0x18)
 	struct TMap<struct FString, struct URichtapClip*> HeDataMap; // 0x40(0x50)
 
-	void SetRichtapEnable(bool On); // Function RichtapTools.RichtapController.SetRichtapEnable // (Final|Native|Public) // @ game+0xb31240
-	void SetEnableRichtap(bool bIsEnableRichtap); // Function RichtapTools.RichtapController.SetEnableRichtap // (Final|Native|Static|Public|BlueprintCallable) // @ game+0xb311c0
+	void SetRichtapEnable(bool On); // Function RichtapTools.RichtapController.SetRichtapEnable // (Final|Native|Public) // @ game+0xb34dd0
+	void SetEnableRichtap(bool bIsEnableRichtap); // Function RichtapTools.RichtapController.SetEnableRichtap // (Final|Native|Static|Public|BlueprintCallable) // @ game+0xb34d50
 };
 

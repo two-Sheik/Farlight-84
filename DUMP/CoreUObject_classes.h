@@ -3,7 +3,7 @@
 struct UObject {
 	char pad_0[0x28]; // 0x00(0x28)
 
-	void ExecuteUbergraph(int32_t EntryPoint); // Function CoreUObject.Object.ExecuteUbergraph // (Event|Public|BlueprintEvent) // @ game+0x25d95f0
+	void ExecuteUbergraph(int32_t EntryPoint); // Function CoreUObject.Object.ExecuteUbergraph // (Event|Public|BlueprintEvent) // @ game+0x260de00
 };
 
 // Class CoreUObject.Interface

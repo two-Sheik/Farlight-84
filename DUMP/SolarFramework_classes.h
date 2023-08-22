@@ -2,8 +2,8 @@
 // Size: 0x28 (Inherited: 0x28)
 struct USolarContainer : UObject {
 
-	void ReceiveInitialize(); // Function SolarFramework.SolarContainer.ReceiveInitialize // (Event|Public|BlueprintEvent) // @ game+0x25d95f0
-	void ReceiveDeinitialize(); // Function SolarFramework.SolarContainer.ReceiveDeinitialize // (Event|Public|BlueprintEvent) // @ game+0x25d95f0
+	void ReceiveInitialize(); // Function SolarFramework.SolarContainer.ReceiveInitialize // (Event|Public|BlueprintEvent) // @ game+0x260de00
+	void ReceiveDeinitialize(); // Function SolarFramework.SolarContainer.ReceiveDeinitialize // (Event|Public|BlueprintEvent) // @ game+0x260de00
 };
 
 // Class SolarFramework.SolarAbstractManager
@@ -22,15 +22,15 @@ struct USolarArchitecture : UGameInstance {
 	struct FMulticastInlineDelegate OnOnScopeChangeDelegate; // 0x1a0(0x10)
 	char pad_1B0[0x198]; // 0x1b0(0x198)
 
-	void OnScopeChanged(enum class EScope InLastScope, enum class EScope InCurScope); // Function SolarFramework.SolarArchitecture.OnScopeChanged // (Event|Public|BlueprintEvent) // @ game+0x25d95f0
-	bool IsScopeSettlement(); // Function SolarFramework.SolarArchitecture.IsScopeSettlement // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d5970
-	bool IsScopeLogin(); // Function SolarFramework.SolarArchitecture.IsScopeLogin // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d5940
-	bool IsScopeLobby(); // Function SolarFramework.SolarArchitecture.IsScopeLobby // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d5910
-	bool IsScopeBattle(); // Function SolarFramework.SolarArchitecture.IsScopeBattle // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d58e0
-	bool IsInScope(enum class EScope InScopeMask); // Function SolarFramework.SolarArchitecture.IsInScope // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d5850
-	struct USolarAbstractModel* GetModel(struct USolarAbstractModel*& ModelClass); // Function SolarFramework.SolarArchitecture.GetModel // (Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d57b0
-	struct USolarAbstractManager* GetManager(struct USolarAbstractManager*& ManagerClass); // Function SolarFramework.SolarArchitecture.GetManager // (Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d5710
-	enum class EScope GetCurScope(); // Function SolarFramework.SolarArchitecture.GetCurScope // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x22d56f0
+	void OnScopeChanged(enum class EScope InLastScope, enum class EScope InCurScope); // Function SolarFramework.SolarArchitecture.OnScopeChanged // (Event|Public|BlueprintEvent) // @ game+0x260de00
+	bool IsScopeSettlement(); // Function SolarFramework.SolarArchitecture.IsScopeSettlement // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x230a150
+	bool IsScopeLogin(); // Function SolarFramework.SolarArchitecture.IsScopeLogin // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x230a120
+	bool IsScopeLobby(); // Function SolarFramework.SolarArchitecture.IsScopeLobby // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x230a0f0
+	bool IsScopeBattle(); // Function SolarFramework.SolarArchitecture.IsScopeBattle // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x230a0c0
+	bool IsInScope(enum class EScope InScopeMask); // Function SolarFramework.SolarArchitecture.IsInScope // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x230a030
+	struct USolarAbstractModel* GetModel(struct USolarAbstractModel*& ModelClass); // Function SolarFramework.SolarArchitecture.GetModel // (Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const) // @ game+0x2309f90
+	struct USolarAbstractManager* GetManager(struct USolarAbstractManager*& ManagerClass); // Function SolarFramework.SolarArchitecture.GetManager // (Final|Native|Public|HasOutParms|BlueprintCallable|BlueprintPure|Const) // @ game+0x2309ef0
+	enum class EScope GetCurScope(); // Function SolarFramework.SolarArchitecture.GetCurScope // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x2309ed0
 };
 
 // Class SolarFramework.SolarFrameworkSettings

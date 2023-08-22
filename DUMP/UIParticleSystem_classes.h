@@ -9,8 +9,8 @@ struct UParticleSystemWidget : UWidget {
 	struct AActor* WorldParticleActor; // 0x150(0x08)
 	char pad_158[0x10]; // 0x158(0x10)
 
-	void SetReactivate(bool bActivateAndReset); // Function UIParticleSystem.ParticleSystemWidget.SetReactivate // (Final|Native|Public|BlueprintCallable) // @ game+0x815ea0
-	void ActivateParticles(bool bActive, bool bReset); // Function UIParticleSystem.ParticleSystemWidget.ActivateParticles // (Final|Native|Public|BlueprintCallable) // @ game+0x815dd0
+	void SetReactivate(bool bActivateAndReset); // Function UIParticleSystem.ParticleSystemWidget.SetReactivate // (Final|Native|Public|BlueprintCallable) // @ game+0x819670
+	void ActivateParticles(bool bActive, bool bReset); // Function UIParticleSystem.ParticleSystemWidget.ActivateParticles // (Final|Native|Public|BlueprintCallable) // @ game+0x8195a0
 };
 
 // Class UIParticleSystem.UIParticleComponent

@@ -48,7 +48,7 @@ struct UClothingSimulationFactoryNv : UClothingSimulationFactory {
 struct UClothingSimulationInteractorNv : UClothingSimulationInteractor {
 	char pad_30[0x10]; // 0x30(0x10)
 
-	void SetAnimDriveDamperStiffness(float InStiffness); // Function ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness // (Final|Native|Public|BlueprintCallable) // @ game+0x3ee0940
+	void SetAnimDriveDamperStiffness(float InStiffness); // Function ClothingSystemRuntimeNv.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness // (Final|Native|Public|BlueprintCallable) // @ game+0x3f15710
 };
 
 // Class ClothingSystemRuntimeNv.ClothPhysicalMeshDataNv_Legacy

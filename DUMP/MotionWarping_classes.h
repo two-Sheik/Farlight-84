@@ -3,22 +3,22 @@
 struct UAnimNotifyState_MotionWarping : UAnimNotifyState {
 	struct URootMotionModifier* RootMotionModifier; // 0x30(0x08)
 
-	void OnWarpUpdate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpUpdate // (Event|Public|BlueprintEvent|Const) // @ game+0x25d95f0
-	void OnWarpEnd(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpEnd // (Event|Public|BlueprintEvent|Const) // @ game+0x25d95f0
-	void OnWarpBegin(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpBegin // (Event|Public|BlueprintEvent|Const) // @ game+0x25d95f0
-	void OnRootMotionModifierUpdate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierUpdate // (Final|Native|Public|Const) // @ game+0x88a4b0
-	void OnRootMotionModifierDeactivate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierDeactivate // (Final|Native|Public|Const) // @ game+0x88a3e0
-	void OnRootMotionModifierActivate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierActivate // (Final|Native|Public|Const) // @ game+0x88a310
-	struct URootMotionModifier* AddRootMotionModifier(struct UMotionWarpingComponent* MotionWarpingComp, struct UAnimSequenceBase* Animation, float StartTime, float EndTime); // Function MotionWarping.AnimNotifyState_MotionWarping.AddRootMotionModifier // (Native|Event|Public|BlueprintEvent|Const) // @ game+0x8893e0
+	void OnWarpUpdate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpUpdate // (Event|Public|BlueprintEvent|Const) // @ game+0x260de00
+	void OnWarpEnd(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpEnd // (Event|Public|BlueprintEvent|Const) // @ game+0x260de00
+	void OnWarpBegin(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnWarpBegin // (Event|Public|BlueprintEvent|Const) // @ game+0x260de00
+	void OnRootMotionModifierUpdate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierUpdate // (Final|Native|Public|Const) // @ game+0x88de90
+	void OnRootMotionModifierDeactivate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierDeactivate // (Final|Native|Public|Const) // @ game+0x88ddc0
+	void OnRootMotionModifierActivate(struct UMotionWarpingComponent* MotionWarpingComp, struct URootMotionModifier* Modifier); // Function MotionWarping.AnimNotifyState_MotionWarping.OnRootMotionModifierActivate // (Final|Native|Public|Const) // @ game+0x88dcf0
+	struct URootMotionModifier* AddRootMotionModifier(struct UMotionWarpingComponent* MotionWarpingComp, struct UAnimSequenceBase* Animation, float StartTime, float EndTime); // Function MotionWarping.AnimNotifyState_MotionWarping.AddRootMotionModifier // (Native|Event|Public|BlueprintEvent|Const) // @ game+0x88cdc0
 };
 
 // Class MotionWarping.MotionWarpingUtilities
 // Size: 0x28 (Inherited: 0x28)
 struct UMotionWarpingUtilities : UBlueprintFunctionLibrary {
 
-	void GetMotionWarpingWindowsFromAnimation(struct UAnimSequenceBase* Animation, struct TArray<struct FMotionWarpingWindowData>& OutWindows); // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsFromAnimation // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x88a230
-	void GetMotionWarpingWindowsForWarpTargetFromAnimation(struct UAnimSequenceBase* Animation, struct FName WarpTargetName, struct TArray<struct FMotionWarpingWindowData>& OutWindows); // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsForWarpTargetFromAnimation // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x88a110
-	struct FTransform ExtractRootMotionFromAnimation(struct UAnimSequenceBase* Animation, float StartTime, float EndTime); // Function MotionWarping.MotionWarpingUtilities.ExtractRootMotionFromAnimation // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x889e00
+	void GetMotionWarpingWindowsFromAnimation(struct UAnimSequenceBase* Animation, struct TArray<struct FMotionWarpingWindowData>& OutWindows); // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsFromAnimation // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x88dc10
+	void GetMotionWarpingWindowsForWarpTargetFromAnimation(struct UAnimSequenceBase* Animation, struct FName WarpTargetName, struct TArray<struct FMotionWarpingWindowData>& OutWindows); // Function MotionWarping.MotionWarpingUtilities.GetMotionWarpingWindowsForWarpTargetFromAnimation // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x88daf0
+	struct FTransform ExtractRootMotionFromAnimation(struct UAnimSequenceBase* Animation, float StartTime, float EndTime); // Function MotionWarping.MotionWarpingUtilities.ExtractRootMotionFromAnimation // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x88d7e0
 };
 
 // Class MotionWarping.MotionWarpingComponent
@@ -32,13 +32,13 @@ struct UMotionWarpingComponent : UActorComponent {
 	struct TMap<struct FName, struct FMotionWarpingTarget> WarpTargetMap; // 0xe0(0x50)
 	char pad_130[0x18]; // 0x130(0x18)
 
-	int32_t RemoveWarpTarget(struct FName WarpTargetName); // Function MotionWarping.MotionWarpingComponent.RemoveWarpTarget // (Final|Native|Public|BlueprintCallable) // @ game+0x88a580
-	void DisableAllRootMotionModifiers(); // Function MotionWarping.MotionWarpingComponent.DisableAllRootMotionModifiers // (Final|Native|Public|BlueprintCallable) // @ game+0x889de0
-	void AddOrUpdateWarpTargetFromTransform(struct FName WarpTargetName, struct FTransform TargetTransform); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromTransform // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x8892a0
-	void AddOrUpdateWarpTargetFromLocationAndRotation(struct FName WarpTargetName, struct FVector TargetLocation, struct FRotator TargetRotation); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocationAndRotation // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x889100
-	void AddOrUpdateWarpTargetFromLocation(struct FName WarpTargetName, struct FVector TargetLocation); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocation // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x889000
-	void AddOrUpdateWarpTargetFromComponent(struct FName WarpTargetName, struct USceneComponent* Component, struct FName BoneName, bool bFollowComponent); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromComponent // (Final|Native|Public|BlueprintCallable) // @ game+0x888ea0
-	void AddOrUpdateWarpTarget(struct FName WarpTargetName, struct FMotionWarpingTarget& WarpTarget); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTarget // (Final|Native|Public|HasOutParms|BlueprintCallable) // @ game+0x888d60
+	int32_t RemoveWarpTarget(struct FName WarpTargetName); // Function MotionWarping.MotionWarpingComponent.RemoveWarpTarget // (Final|Native|Public|BlueprintCallable) // @ game+0x88df60
+	void DisableAllRootMotionModifiers(); // Function MotionWarping.MotionWarpingComponent.DisableAllRootMotionModifiers // (Final|Native|Public|BlueprintCallable) // @ game+0x88d7c0
+	void AddOrUpdateWarpTargetFromTransform(struct FName WarpTargetName, struct FTransform TargetTransform); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromTransform // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x88cc80
+	void AddOrUpdateWarpTargetFromLocationAndRotation(struct FName WarpTargetName, struct FVector TargetLocation, struct FRotator TargetRotation); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocationAndRotation // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x88cae0
+	void AddOrUpdateWarpTargetFromLocation(struct FName WarpTargetName, struct FVector TargetLocation); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromLocation // (Final|Native|Public|HasDefaults|BlueprintCallable) // @ game+0x88c9e0
+	void AddOrUpdateWarpTargetFromComponent(struct FName WarpTargetName, struct USceneComponent* Component, struct FName BoneName, bool bFollowComponent); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTargetFromComponent // (Final|Native|Public|BlueprintCallable) // @ game+0x88c880
+	void AddOrUpdateWarpTarget(struct FName WarpTargetName, struct FMotionWarpingTarget& WarpTarget); // Function MotionWarping.MotionWarpingComponent.AddOrUpdateWarpTarget // (Final|Native|Public|HasOutParms|BlueprintCallable) // @ game+0x88c740
 };
 
 // Class MotionWarping.RootMotionModifier
@@ -105,8 +105,8 @@ struct URootMotionModifier_AdjustmentBlendWarp : URootMotionModifier_Warp {
 	struct FTransform CachedRootMotion; // 0x230(0x30)
 	struct FAnimSequenceTrackContainer Result; // 0x260(0x20)
 
-	void GetAdjustmentBlendIKBoneTransformAndAlpha(struct ACharacter* Character, struct FName BoneName, struct FTransform& OutTransform, float& OutAlpha); // Function MotionWarping.RootMotionModifier_AdjustmentBlendWarp.GetAdjustmentBlendIKBoneTransformAndAlpha // (Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure) // @ game+0x889f50
-	struct URootMotionModifier_AdjustmentBlendWarp* AddRootMotionModifierAdjustmentBlendWarp(struct UMotionWarpingComponent* InMotionWarpingComp, struct UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, struct FName InWarpTargetName, enum class EWarpPointAnimProvider InWarpPointAnimProvider, struct FTransform InWarpPointAnimTransform, struct FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, bool bInWarpIKBones, struct TArray<struct FName>& InIKBones); // Function MotionWarping.RootMotionModifier_AdjustmentBlendWarp.AddRootMotionModifierAdjustmentBlendWarp // (Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable) // @ game+0x889540
+	void GetAdjustmentBlendIKBoneTransformAndAlpha(struct ACharacter* Character, struct FName BoneName, struct FTransform& OutTransform, float& OutAlpha); // Function MotionWarping.RootMotionModifier_AdjustmentBlendWarp.GetAdjustmentBlendIKBoneTransformAndAlpha // (Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable|BlueprintPure) // @ game+0x88d930
+	struct URootMotionModifier_AdjustmentBlendWarp* AddRootMotionModifierAdjustmentBlendWarp(struct UMotionWarpingComponent* InMotionWarpingComp, struct UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, struct FName InWarpTargetName, enum class EWarpPointAnimProvider InWarpPointAnimProvider, struct FTransform InWarpPointAnimTransform, struct FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, bool bInWarpIKBones, struct TArray<struct FName>& InIKBones); // Function MotionWarping.RootMotionModifier_AdjustmentBlendWarp.AddRootMotionModifierAdjustmentBlendWarp // (Final|Native|Static|Public|HasOutParms|HasDefaults|BlueprintCallable) // @ game+0x88cf20
 };
 
 // Class MotionWarping.RootMotionModifier_SkewWarp
@@ -117,6 +117,6 @@ struct URootMotionModifier_SkewWarp : URootMotionModifier_Warp {
 	bool bClampByWarpDir2D; // 0x1b8(0x01)
 	char pad_1B9[0x17]; // 0x1b9(0x17)
 
-	struct URootMotionModifier_SkewWarp* AddRootMotionModifierSkewWarp(struct UMotionWarpingComponent* InMotionWarpingComp, struct UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, struct FName InWarpTargetName, enum class EWarpPointAnimProvider InWarpPointAnimProvider, struct FTransform InWarpPointAnimTransform, struct FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, enum class EMotionWarpRotationType InRotationType, float InWarpRotationTimeMultiplier); // Function MotionWarping.RootMotionModifier_SkewWarp.AddRootMotionModifierSkewWarp // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x8899a0
+	struct URootMotionModifier_SkewWarp* AddRootMotionModifierSkewWarp(struct UMotionWarpingComponent* InMotionWarpingComp, struct UAnimSequenceBase* InAnimation, float InStartTime, float InEndTime, struct FName InWarpTargetName, enum class EWarpPointAnimProvider InWarpPointAnimProvider, struct FTransform InWarpPointAnimTransform, struct FName InWarpPointAnimBoneName, bool bInWarpTranslation, bool bInIgnoreZAxis, bool bInWarpRotation, enum class EMotionWarpRotationType InRotationType, float InWarpRotationTimeMultiplier); // Function MotionWarping.RootMotionModifier_SkewWarp.AddRootMotionModifierSkewWarp // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x88d380
 };
 

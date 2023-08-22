@@ -4,10 +4,10 @@ struct USteamAuthComponentModuleInterface : UHandlerComponentFactory {
 };
 
 // Class OnlineSubsystemSteam.SteamNetConnection
-// Size: 0x1bb0 (Inherited: 0x1ba8)
+// Size: 0x1bb8 (Inherited: 0x1bb0)
 struct USteamNetConnection : UIpConnection {
-	bool bIsPassthrough; // 0x1ba8(0x01)
-	char pad_1BA9[0x7]; // 0x1ba9(0x07)
+	bool bIsPassthrough; // 0x1bb0(0x01)
+	char pad_1BB1[0x7]; // 0x1bb1(0x07)
 };
 
 // Class OnlineSubsystemSteam.SteamNetDriver

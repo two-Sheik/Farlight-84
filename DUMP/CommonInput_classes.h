@@ -21,7 +21,7 @@ struct UCommonInputBaseControllerData : UObject {
 	struct TArray<struct FCommonInputKeyBrushConfiguration> InputBrushDataMap; // 0xe0(0x10)
 	struct TArray<struct FCommonInputKeySetBrushConfiguration> InputBrushKeySets; // 0xf0(0x10)
 
-	struct TArray<struct FName> GetRegisteredGamepads(); // Function CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads // (Final|Native|Static|Public) // @ game+0xbae4c0
+	struct TArray<struct FName> GetRegisteredGamepads(); // Function CommonInput.CommonInputBaseControllerData.GetRegisteredGamepads // (Final|Native|Static|Public) // @ game+0xbb2340
 };
 
 // Class CommonInput.CommonInputSettings
@@ -39,7 +39,7 @@ struct UCommonInputSettings : UObject {
 	struct UCommonUIInputData* InputDataClass; // 0xc0(0x08)
 	struct FCommonInputPlatformBaseData CurrentPlatform; // 0xc8(0x38)
 
-	struct TArray<struct FName> GetRegisteredPlatforms(); // Function CommonInput.CommonInputSettings.GetRegisteredPlatforms // (Final|Native|Static|Private) // @ game+0xbae500
+	struct TArray<struct FName> GetRegisteredPlatforms(); // Function CommonInput.CommonInputSettings.GetRegisteredPlatforms // (Final|Native|Static|Private) // @ game+0xbb2380
 };
 
 // Class CommonInput.CommonInputSubsystem
@@ -61,13 +61,13 @@ struct UCommonInputSubsystem : ULocalPlayerSubsystem {
 	bool bIsGamepadSimulatedClick; // 0xf0(0x01)
 	char pad_F1[0x7]; // 0xf1(0x07)
 
-	bool ShouldShowInputKeys(); // Function CommonInput.CommonInputSubsystem.ShouldShowInputKeys // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae720
-	void SetGamepadInputType(struct FName InGamepadInputType); // Function CommonInput.CommonInputSubsystem.SetGamepadInputType // (Final|Native|Public|BlueprintCallable) // @ game+0xbae690
-	bool SetCurrentInputType(enum class ECommonInputType NewInputType); // Function CommonInput.CommonInputSubsystem.SetCurrentInputType // (Final|Native|Public|BlueprintCallable) // @ game+0xbae600
-	bool IsUsingPointerInput(); // Function CommonInput.CommonInputSubsystem.IsUsingPointerInput // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae5d0
-	bool IsInputMethodActive(enum class ECommonInputType InputMethod); // Function CommonInput.CommonInputSubsystem.IsInputMethodActive // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae540
-	enum class ECommonInputType GetDefaultInputType(); // Function CommonInput.CommonInputSubsystem.GetDefaultInputType // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae490
-	enum class ECommonInputType GetCurrentInputType(); // Function CommonInput.CommonInputSubsystem.GetCurrentInputType // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae460
-	struct FName GetCurrentGamepadName(); // Function CommonInput.CommonInputSubsystem.GetCurrentGamepadName // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbae420
+	bool ShouldShowInputKeys(); // Function CommonInput.CommonInputSubsystem.ShouldShowInputKeys // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb25a0
+	void SetGamepadInputType(struct FName InGamepadInputType); // Function CommonInput.CommonInputSubsystem.SetGamepadInputType // (Final|Native|Public|BlueprintCallable) // @ game+0xbb2510
+	bool SetCurrentInputType(enum class ECommonInputType NewInputType); // Function CommonInput.CommonInputSubsystem.SetCurrentInputType // (Final|Native|Public|BlueprintCallable) // @ game+0xbb2480
+	bool IsUsingPointerInput(); // Function CommonInput.CommonInputSubsystem.IsUsingPointerInput // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb2450
+	bool IsInputMethodActive(enum class ECommonInputType InputMethod); // Function CommonInput.CommonInputSubsystem.IsInputMethodActive // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb23c0
+	enum class ECommonInputType GetDefaultInputType(); // Function CommonInput.CommonInputSubsystem.GetDefaultInputType // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb2310
+	enum class ECommonInputType GetCurrentInputType(); // Function CommonInput.CommonInputSubsystem.GetCurrentInputType // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb22e0
+	struct FName GetCurrentGamepadName(); // Function CommonInput.CommonInputSubsystem.GetCurrentGamepadName // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0xbb22a0
 };
 

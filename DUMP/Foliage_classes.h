@@ -10,8 +10,8 @@ struct UFoliageInstancedStaticMeshComponent : UHierarchicalInstancedStaticMeshCo
 // Size: 0x28 (Inherited: 0x28)
 struct UFoliageStatistics : UBlueprintFunctionLibrary {
 
-	int32_t FoliageOverlappingSphereCount(struct UObject* WorldContextObject, struct UStaticMesh* StaticMesh, struct FVector CenterPosition, float Radius); // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x3296690
-	int32_t FoliageOverlappingBoxCount(struct UObject* WorldContextObject, struct UStaticMesh* StaticMesh, struct FBox Box); // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x3296550
+	int32_t FoliageOverlappingSphereCount(struct UObject* WorldContextObject, struct UStaticMesh* StaticMesh, struct FVector CenterPosition, float Radius); // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x32cb1c0
+	int32_t FoliageOverlappingBoxCount(struct UObject* WorldContextObject, struct UStaticMesh* StaticMesh, struct FBox Box); // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount // (Final|Native|Static|Public|HasDefaults|BlueprintCallable) // @ game+0x32cb080
 };
 
 // Class Foliage.FoliageType
@@ -180,7 +180,7 @@ struct AInteractiveFoliageActor : AStaticMeshActor {
 	float Mass; // 0x290(0x04)
 	char pad_294[0x4]; // 0x294(0x04)
 
-	void CapsuleTouched(struct UPrimitiveComponent* OverlappedComp, struct AActor* Other, struct UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, struct FHitResult& OverlapInfo); // Function Foliage.InteractiveFoliageActor.CapsuleTouched // (Final|Native|Protected|HasOutParms) // @ game+0x3296330
+	void CapsuleTouched(struct UPrimitiveComponent* OverlappedComp, struct AActor* Other, struct UPrimitiveComponent* OtherComp, int32_t OtherBodyIndex, bool bFromSweep, struct FHitResult& OverlapInfo); // Function Foliage.InteractiveFoliageActor.CapsuleTouched // (Final|Native|Protected|HasOutParms) // @ game+0x32cae60
 };
 
 // Class Foliage.InteractiveFoliageComponent
@@ -216,7 +216,7 @@ struct UProceduralFoliageSpawner : UObject {
 	struct TArray<struct FFoliageTypeObject> FoliageTypes; // 0x40(0x10)
 	char pad_50[0x18]; // 0x50(0x18)
 
-	void Simulate(int32_t NumSteps); // Function Foliage.ProceduralFoliageSpawner.Simulate // (Final|Native|Public|BlueprintCallable) // @ game+0x32967f0
+	void Simulate(int32_t NumSteps); // Function Foliage.ProceduralFoliageSpawner.Simulate // (Final|Native|Public|BlueprintCallable) // @ game+0x32cb320
 };
 
 // Class Foliage.ProceduralFoliageTile

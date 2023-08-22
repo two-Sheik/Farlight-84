@@ -36,9 +36,9 @@ struct UGameMapsSettings : UObject {
 	struct TArray<struct FGameModeName> GameModeMapPrefixes; // 0xd0(0x10)
 	struct TArray<struct FGameModeName> GameModeClassAliases; // 0xe0(0x10)
 
-	void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer); // Function EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1 // (Final|Native|Public|BlueprintCallable) // @ game+0x2defd20
-	bool GetSkipAssigningGamepadToPlayer1(); // Function EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1 // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x2defcf0
-	struct UGameMapsSettings* GetGameMapsSettings(); // Function EngineSettings.GameMapsSettings.GetGameMapsSettings // (Final|Native|Static|Public|BlueprintCallable|BlueprintPure) // @ game+0x2defcc0
+	void SetSkipAssigningGamepadToPlayer1(bool bSkipFirstPlayer); // Function EngineSettings.GameMapsSettings.SetSkipAssigningGamepadToPlayer1 // (Final|Native|Public|BlueprintCallable) // @ game+0x2e24780
+	bool GetSkipAssigningGamepadToPlayer1(); // Function EngineSettings.GameMapsSettings.GetSkipAssigningGamepadToPlayer1 // (Final|Native|Public|BlueprintCallable|BlueprintPure|Const) // @ game+0x2e24750
+	struct UGameMapsSettings* GetGameMapsSettings(); // Function EngineSettings.GameMapsSettings.GetGameMapsSettings // (Final|Native|Static|Public|BlueprintCallable|BlueprintPure) // @ game+0x2e24720
 };
 
 // Class EngineSettings.GameNetworkManagerSettings

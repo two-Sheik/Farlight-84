@@ -138,58 +138,68 @@ enum class EStatisticsType : uint8 {
 	SaveCount = 60,
 	TeammateHeal = 61,
 	ReceivedHeal = 62,
-	CarSkillCount = 63,
-	VechileDistance = 64,
-	TotalVechileDistance = 65,
-	VehicleTime = 66,
-	UseVehicleTypes = 67,
-	LastUseVehicleID = 68,
-	TakeTheCarOfEnemy = 69,
-	DriveCarInAirTime = 70,
-	WeaponID1 = 71,
-	WeaponID2 = 72,
-	WeaponLevel1 = 73,
-	WeaponLevel2 = 74,
-	UseWeaponSkillNum = 75,
-	WeaponUseStartTimeWithID = 76,
-	WeaponUseTimeWithID = 77,
-	MaxGodWeaponNum = 78,
-	CollectEnergy = 79,
-	EscapeTimes = 80,
-	CollectBoxNum = 81,
-	CollectBoxNumWithHighQuality = 82,
-	FlyCount = 83,
-	ArmorUseCount = 84,
-	ShieldRechargeCount = 85,
-	EChestOpenNumForID = 86,
-	DeathPos = 87,
-	LandingPos = 88,
-	LandingTime = 89,
-	DropoutEvent = 90,
-	DropoutTime = 91,
-	MedicineUseCount = 92,
-	RadarUseCount = 93,
-	P_BattleResult = 94,
-	OpenAirBoxNum = 95,
-	KillInAirNum = 96,
-	KillDownInAirNum = 97,
-	ResurrectionNum = 98,
-	ResurrectionCapsule = 99,
-	TeamFriendRevive = 100,
-	BuyESElectricNum = 101,
-	CarFireCount = 102,
-	HangTimeDuration = 103,
-	SkydiveLandingDuration = 104,
-	UltimateSkillUseCount = 105,
-	TacticalSkillUseCount = 106,
-	UltimateSkillDamage = 107,
-	TacticalSkillDamage = 108,
-	UltimateSkillTakenDamage = 109,
-	TacticalSkillTakenDamage = 110,
-	UltimateSkillKillNum = 111,
-	TacticalSkillKillNum = 112,
-	HasHighlight = 113,
-	MAX = 114
+	ResurrectionCount = 63,
+	CarSkillCount = 64,
+	VechileDistance = 65,
+	TotalVechileDistance = 66,
+	VehicleTime = 67,
+	UseVehicleTypes = 68,
+	LastUseVehicleID = 69,
+	TakeTheCarOfEnemy = 70,
+	DriveCarInAirTime = 71,
+	DriveHoverCarInWaterDistance = 72,
+	WeaponID1 = 73,
+	WeaponID2 = 74,
+	WeaponLevel1 = 75,
+	WeaponLevel2 = 76,
+	UseWeaponSkillNum = 77,
+	WeaponUseStartTimeWithID = 78,
+	WeaponUseTimeWithID = 79,
+	MaxGodWeaponNum = 80,
+	CollectEnergy = 81,
+	EscapeTimes = 82,
+	CollectBoxNum = 83,
+	CollectBoxNumWithHighQuality = 84,
+	FlyCount = 85,
+	ArmorUseCount = 86,
+	ShieldRechargeCount = 87,
+	EChestOpenNumForID = 88,
+	DeathPos = 89,
+	LandingPos = 90,
+	LandingTime = 91,
+	DropoutEvent = 92,
+	DropoutTime = 93,
+	MedicineUseCount = 94,
+	RadarUseCount = 95,
+	P_BattleResult = 96,
+	OpenAirBoxNum = 97,
+	KillInAirNum = 98,
+	KillDownInAirNum = 99,
+	ResurrectionNum = 100,
+	ResurrectionCapsule = 101,
+	TeamFriendRevive = 102,
+	BuyESElectricNum = 103,
+	CarFireCount = 104,
+	HangTimeDuration = 105,
+	SkydiveLandingDuration = 106,
+	SwimDistance = 107,
+	DanceCount = 108,
+	PosionWalkDistance = 109,
+	ShieldExpGainCount = 110,
+	UpgradeShieldCount = 111,
+	UpgradeRedShieldCount = 112,
+	JumpBoardUseCount = 113,
+	TerminaterCount = 114,
+	UltimateSkillUseCount = 115,
+	TacticalSkillUseCount = 116,
+	UltimateSkillDamage = 117,
+	TacticalSkillDamage = 118,
+	UltimateSkillTakenDamage = 119,
+	TacticalSkillTakenDamage = 120,
+	UltimateSkillKillNum = 121,
+	TacticalSkillKillNum = 122,
+	HasHighlight = 123,
+	MAX = 124
 };
 
 // Enum Solarland.ERecordingType
@@ -199,7 +209,8 @@ enum class ERecordingType : uint8 {
 	NormalMatch = 2,
 	Tournament = 3,
 	LiveWatchOnly = 4,
-	ERecordingType_MAX = 5
+	LocalHighlight = 5,
+	ERecordingType_MAX = 6
 };
 
 // Enum Solarland.EReplayManagerState
@@ -693,7 +704,9 @@ enum class EReplayCameraMode : uint8 {
 	ThirdPersonMode = 1,
 	LockMode = 2,
 	FreeMode = 3,
-	EReplayCameraMode_MAX = 4
+	LookAtMode = 4,
+	CircularMode = 5,
+	EReplayCameraMode_MAX = 6
 };
 
 // Enum Solarland.ESkydiveStage
@@ -1546,6 +1559,28 @@ enum class EBattleOBHUDType : uint8 {
 	EBattleOBHUDType_MAX = 4
 };
 
+// Enum Solarland.EReplayActivityHeatKillUseType
+enum class EReplayActivityHeatKillUseType : uint8 {
+	None = 0,
+	Weapon = 1,
+	Vehicle = 2,
+	Skill = 3,
+	EReplayActivityHeatKillUseType_MAX = 4
+};
+
+// Enum Solarland.EPlayerActivityHeatType
+enum class EPlayerActivityHeatType : uint8 {
+	None = 0,
+	Parachute = 1,
+	ResurrectionParachute = 2,
+	KillDown = 3,
+	MultiKill = 4,
+	BeKillDown = 5,
+	Death = 6,
+	Win = 7,
+	Max = 8
+};
+
 // Enum Solarland.EOBPlayerHeadInfoWidgetStyle
 enum class EOBPlayerHeadInfoWidgetStyle : uint8 {
 	NearMode = 0,
@@ -1581,7 +1616,8 @@ enum class EUIPanelName : uint8 {
 	UI_BuffEffectScreenPanel = 22,
 	UI_TestCustomPanel = 23,
 	Solarland_DevDebugUI_Widget = 24,
-	EUIPanelName_MAX = 25
+	UI_Highlight_Overview = 25,
+	EUIPanelName_MAX = 26
 };
 
 // Enum Solarland.EWidgetBackKeyType
@@ -3263,6 +3299,22 @@ enum class EMovementComponentEnableType : uint8 {
 	EMovementComponentEnableType_MAX = 3
 };
 
+// Enum Solarland.EAntiCheatGameEvents
+enum class EAntiCheatGameEvents : uint8 {
+	ServerFire = 0,
+	ServerHit = 1,
+	ServerKill = 2,
+	ServerKilled = 3,
+	ClientFire = 4,
+	ClientHit = 5,
+	ClientKill = 6,
+	ClientKilled = 7,
+	ClientHitDown = 8,
+	ClientBeHitDown = 9,
+	EventMax = 10,
+	EAntiCheatGameEvents_MAX = 11
+};
+
 // Enum Solarland.EAnimReloadNotifyType
 enum class EAnimReloadNotifyType : uint8 {
 	InHand = 0,
@@ -3565,8 +3617,7 @@ enum class EAntiCheatReportType : uint8 {
 	Player = 0,
 	Weapon = 1,
 	Vehicle = 2,
-	FishingBot = 3,
-	EAntiCheatReportType_MAX = 4
+	EAntiCheatReportType_MAX = 3
 };
 
 // Enum Solarland.ENgaiMLType
@@ -3628,6 +3679,14 @@ enum class EConfigVersion : uint8 {
 	VersionPlusOne = 2,
 	LatestVersion = 1,
 	EConfigVersion_MAX = 3
+};
+
+// Enum Solarland.EBasicSettingBool
+enum class EBasicSettingBool : uint8 {
+	NotInit = 0,
+	Off = 1,
+	On = 2,
+	EBasicSettingBool_MAX = 3
 };
 
 // Enum Solarland.ESolarTouchAccMode
@@ -3695,8 +3754,9 @@ enum class ESolarGameUserSettingPart : uint8 {
 	SensitivitySettingsGamepad = 11,
 	KeyboardControlSettings = 12,
 	GamepadSettings = 13,
-	All = 14,
-	ESolarGameUserSettingPart_MAX = 15
+	GamepadAdvancedSettings = 14,
+	All = 15,
+	ESolarGameUserSettingPart_MAX = 16
 };
 
 // Enum Solarland.EGraphicQualitySelect
@@ -4587,6 +4647,15 @@ enum class EReplayFindSpectateTargetApproach : uint8 {
 	EReplayFindSpectateTargetApproach_MAX = 5
 };
 
+// Enum Solarland.EPlayerHighlightMarkType
+enum class EPlayerHighlightMarkType : uint8 {
+	B = 0,
+	A = 1,
+	S = 2,
+	Ex = 3,
+	Max = 4
+};
+
 // Enum Solarland.EClassRepNodeMapping
 enum class EClassRepNodeMapping : uint8 {
 	Missing = 0,
@@ -4951,6 +5020,16 @@ enum class ESolarTablesEnum_InputGroupType : uint8 {
 	ESolarTablesEnum_MAX = 5
 };
 
+// Enum Solarland.ESolarTablesEnum_GamepadCtrlType
+enum class ESolarTablesEnum_GamepadCtrlType : uint8 {
+	GamepadCtrlHide = 0,
+	GamepadCtrlShowOnly = 1,
+	GamepadCtrlCustom = 2,
+	GamepadCtrlCustomAndCom = 3,
+	_Count = 4,
+	ESolarTablesEnum_MAX = 5
+};
+
 // Enum Solarland.ESolarTablesEnum_InputGamepadType
 enum class ESolarTablesEnum_InputGamepadType : uint8 {
 	InputGamepadOneKey = 0,
@@ -5125,8 +5204,9 @@ enum class ESolarTablesEnum_ActionType : uint8 {
 	ActionType_VipcardSign = 57,
 	ActionType_Vipcard = 58,
 	ActionType_Signcard = 59,
-	_Count = 60,
-	ESolarTablesEnum_MAX = 61
+	ActionType_ChangeName = 60,
+	_Count = 61,
+	ESolarTablesEnum_MAX = 62
 };
 
 // Enum Solarland.ETaskPage
@@ -6472,6 +6552,12 @@ struct FSettlementTempData {
 	struct TArray<int32_t> BattlePassTaskVal; // 0xc8(0x10)
 };
 
+// ScriptStruct Solarland.KillEnemySnapshot
+// Size: 0x18 (Inherited: 0x00)
+struct FKillEnemySnapshot {
+	char pad_0[0x18]; // 0x00(0x18)
+};
+
 // ScriptStruct Solarland.SettlementCrateReward
 // Size: 0x18 (Inherited: 0x00)
 struct FSettlementCrateReward {
@@ -6540,7 +6626,7 @@ struct FSpawnedActorHandle {
 };
 
 // ScriptStruct Solarland.SolarPointDamageEvent
-// Size: 0x108 (Inherited: 0xa8)
+// Size: 0x110 (Inherited: 0xa8)
 struct FSolarPointDamageEvent : FPointDamageEvent {
 	bool bBreakShield; // 0xa8(0x01)
 	bool bIgnoreShield; // 0xa9(0x01)
@@ -6569,7 +6655,7 @@ struct FSolarPointDamageEvent : FPointDamageEvent {
 	char bHitVehicleWeakPoint : 1; // 0x100(0x01)
 	char bHitHumanoidTargetHead : 1; // 0x100(0x01)
 	char pad_100_2 : 6; // 0x100(0x01)
-	char pad_101[0x7]; // 0x101(0x07)
+	char pad_101[0xf]; // 0x101(0x0f)
 };
 
 // ScriptStruct Solarland.ReconnectionParams
@@ -7064,7 +7150,7 @@ struct FCountDownInfo {
 };
 
 // ScriptStruct Solarland.KillInfo
-// Size: 0x90 (Inherited: 0x00)
+// Size: 0x98 (Inherited: 0x00)
 struct FKillInfo {
 	struct FString KillerPlayerId; // 0x00(0x10)
 	int32_t KillerSkinID; // 0x10(0x04)
@@ -7086,8 +7172,34 @@ struct FKillInfo {
 	int32_t WeaponSkinID; // 0x88(0x04)
 	char KillerVipType; // 0x8c(0x01)
 	char VictimVipType; // 0x8d(0x01)
-	bool bDown; // 0x8e(0x01)
-	char pad_8F[0x1]; // 0x8f(0x01)
+	enum class ECommonInputType KillerInputType; // 0x8e(0x01)
+	enum class ECommonInputType VictimInputType; // 0x8f(0x01)
+	bool bDown; // 0x90(0x01)
+	char pad_91[0x7]; // 0x91(0x07)
+};
+
+// ScriptStruct Solarland.ReplayActivityHeatFragment
+// Size: 0x30 (Inherited: 0x00)
+struct FReplayActivityHeatFragment {
+	int32_t FragmentId; // 0x00(0x04)
+	enum class EPlayerActivityHeatType ActivityHeatType; // 0x04(0x01)
+	char pad_5[0x3]; // 0x05(0x03)
+	float TotalScore; // 0x08(0x04)
+	float BeginTime; // 0x0c(0x04)
+	float EndTime; // 0x10(0x04)
+	char pad_14[0x4]; // 0x14(0x04)
+	struct TArray<struct FReplayActivityKillDetail> ActivityKillDetails; // 0x18(0x10)
+	int32_t KillNum; // 0x28(0x04)
+	float ActivityHotTime; // 0x2c(0x04)
+};
+
+// ScriptStruct Solarland.ReplayActivityKillDetail
+// Size: 0x0c (Inherited: 0x00)
+struct FReplayActivityKillDetail {
+	float KillTime; // 0x00(0x04)
+	enum class EReplayActivityHeatKillUseType KillUseType; // 0x04(0x01)
+	char pad_5[0x3]; // 0x05(0x03)
+	int32_t KillToolID; // 0x08(0x04)
 };
 
 // ScriptStruct Solarland.PlayAnimationParams
@@ -8225,6 +8337,16 @@ struct FSElementLevelStreaming {
 	struct ULevelStreamingDynamic* LevelStreamingDynamic; // 0x08(0x08)
 };
 
+// ScriptStruct Solarland.LoadingScreenLevelData
+// Size: 0x68 (Inherited: 0x00)
+struct FLoadingScreenLevelData {
+	struct FVector BackupLevelStreamingLocation; // 0x00(0x0c)
+	char pad_C[0x4]; // 0x0c(0x04)
+	struct TSet<struct FSoftObjectPath> LockupLevels; // 0x10(0x50)
+	float LockupLevelMaxSquaredXYDistance; // 0x60(0x04)
+	char pad_64[0x4]; // 0x64(0x04)
+};
+
 // ScriptStruct Solarland.WeaponVibrateDTRow
 // Size: 0x80 (Inherited: 0x08)
 struct FWeaponVibrateDTRow : FTableRowBase {
@@ -8804,7 +8926,8 @@ struct FDetailedListViewInfo {
 	float LifeTime; // 0x30(0x04)
 	float MvpScore; // 0x34(0x04)
 	int32_t FlagID; // 0x38(0x04)
-	char pad_3C[0x4]; // 0x3c(0x04)
+	enum class ECommonInputType InputType; // 0x3c(0x01)
+	char pad_3D[0x3]; // 0x3d(0x03)
 };
 
 // ScriptStruct Solarland.ConfigMeshData
@@ -8837,6 +8960,17 @@ struct FProgressMeshData {
 	float Progress; // 0x00(0x04)
 	struct FLinearColor Color; // 0x04(0x10)
 	struct FVector2D Offset; // 0x14(0x08)
+};
+
+// ScriptStruct Solarland.ReplayPlayerOverviewData
+// Size: 0x60 (Inherited: 0x00)
+struct FReplayPlayerOverviewData {
+	struct FString playerName; // 0x00(0x10)
+	struct FString HeroName; // 0x10(0x10)
+	struct TSoftObjectPtr<UTexture2D> SkinResourcePtr; // 0x20(0x28)
+	int32_t PlayerNum; // 0x48(0x04)
+	char pad_4C[0x4]; // 0x4c(0x04)
+	struct FString GameModeName; // 0x50(0x10)
 };
 
 // ScriptStruct Solarland.TeamPlayerNavArray
@@ -10011,105 +10145,105 @@ struct FCameraSettings {
 };
 
 // ScriptStruct Solarland.SolarTacticalSkillDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarTacticalSkillDamageEvent : FSolarPointDamageEvent {
 };
 
 // ScriptStruct Solarland.SolarClassSkillDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarClassSkillDamageEvent : FSolarPointDamageEvent {
 };
 
 // ScriptStruct Solarland.WeaponAbilityDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FWeaponAbilityDamageEvent : FSolarPointDamageEvent {
 };
 
 // ScriptStruct Solarland.VehicleAbilityDamageEvent
-// Size: 0x128 (Inherited: 0x108)
+// Size: 0x130 (Inherited: 0x110)
 struct FVehicleAbilityDamageEvent : FSolarPointDamageEvent {
-	struct FString AbilityName; // 0x108(0x10)
-	struct FString AbilityTextType; // 0x118(0x10)
+	struct FString AbilityName; // 0x110(0x10)
+	struct FString AbilityTextType; // 0x120(0x10)
 };
 
 // ScriptStruct Solarland.SummonWeaponDamageEvent
-// Size: 0x110 (Inherited: 0x108)
+// Size: 0x118 (Inherited: 0x110)
 struct FSummonWeaponDamageEvent : FSolarPointDamageEvent {
-	struct TWeakObjectPtr<struct ASolarCharacter> SourceWeaponHolder; // 0x108(0x08)
+	struct TWeakObjectPtr<struct ASolarCharacter> SourceWeaponHolder; // 0x110(0x08)
 };
 
 // ScriptStruct Solarland.SolarWeaponDamageEvent
-// Size: 0x118 (Inherited: 0x108)
+// Size: 0x120 (Inherited: 0x110)
 struct FSolarWeaponDamageEvent : FSolarPointDamageEvent {
-	int32_t weaponid; // 0x108(0x04)
-	int32_t WeaponLv; // 0x10c(0x04)
-	int32_t ItemID; // 0x110(0x04)
-	char pad_114[0x4]; // 0x114(0x04)
-};
-
-// ScriptStruct Solarland.VehicleWeaponDamageEvent
-// Size: 0x120 (Inherited: 0x118)
-struct FVehicleWeaponDamageEvent : FSolarWeaponDamageEvent {
-	int32_t VehicleID; // 0x118(0x04)
+	int32_t weaponid; // 0x110(0x04)
+	int32_t WeaponLv; // 0x114(0x04)
+	int32_t ItemID; // 0x118(0x04)
 	char pad_11C[0x4]; // 0x11c(0x04)
 };
 
+// ScriptStruct Solarland.VehicleWeaponDamageEvent
+// Size: 0x128 (Inherited: 0x120)
+struct FVehicleWeaponDamageEvent : FSolarWeaponDamageEvent {
+	int32_t VehicleID; // 0x120(0x04)
+	char pad_124[0x4]; // 0x124(0x04)
+};
+
 // ScriptStruct Solarland.UnarmWeaponDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FUnarmWeaponDamageEvent : FSolarPointDamageEvent {
 };
 
 // ScriptStruct Solarland.VhicleExplosionDamageEvent
-// Size: 0x110 (Inherited: 0x108)
+// Size: 0x118 (Inherited: 0x110)
 struct FVhicleExplosionDamageEvent : FSolarPointDamageEvent {
-	int32_t VehicleID; // 0x108(0x04)
-	char pad_10C[0x4]; // 0x10c(0x04)
+	int32_t VehicleID; // 0x110(0x04)
+	char pad_114[0x4]; // 0x114(0x04)
 };
 
 // ScriptStruct Solarland.VehicleHitDamageEvent
-// Size: 0x110 (Inherited: 0x108)
+// Size: 0x118 (Inherited: 0x110)
 struct FVehicleHitDamageEvent : FSolarPointDamageEvent {
-	int32_t VehicleID; // 0x108(0x04)
-	char pad_10C[0x4]; // 0x10c(0x04)
+	int32_t VehicleID; // 0x110(0x04)
+	char pad_114[0x4]; // 0x114(0x04)
 };
 
 // ScriptStruct Solarland.SolarSystemDamage
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarSystemDamage : FSolarPointDamageEvent {
 };
 
 // ScriptStruct Solarland.GMCmdDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FGMCmdDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.DeathVergeInWaterDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FDeathVergeInWaterDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.HelplessDeathVergeDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FHelplessDeathVergeDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.DyingDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FDyingDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.SolarAirDropDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarAirDropDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.SolarBombDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarBombDamageEvent : FSolarSystemDamage {
 };
 
 // ScriptStruct Solarland.SolarPoisonDamageEvent
-// Size: 0x108 (Inherited: 0x108)
+// Size: 0x110 (Inherited: 0x110)
 struct FSolarPoisonDamageEvent : FSolarSystemDamage {
 };
 
@@ -10543,6 +10677,15 @@ struct FSolarDamageTextStyle {
 	struct TArray<struct FSolarDamageTextColor> Colors; // 0x90(0x10)
 };
 
+// ScriptStruct Solarland.VehicleDamageLevelColor
+// Size: 0x34 (Inherited: 0x00)
+struct FVehicleDamageLevelColor {
+	struct FLinearColor BackgroundColor; // 0x00(0x10)
+	struct FLinearColor BackgroundLeftPartColor; // 0x10(0x10)
+	struct FLinearColor OutlineColor; // 0x20(0x10)
+	int32_t DamageBonus; // 0x30(0x04)
+};
+
 // ScriptStruct Solarland.VehicleSeatWidgets
 // Size: 0x18 (Inherited: 0x00)
 struct FVehicleSeatWidgets {
@@ -10973,7 +11116,7 @@ struct FCameraSensitivityData {
 };
 
 // ScriptStruct Solarland.BasicUserSettings
-// Size: 0x09 (Inherited: 0x00)
+// Size: 0x0b (Inherited: 0x00)
 struct FBasicUserSettings {
 	bool bOpenUniversalMark; // 0x00(0x01)
 	bool bOpenQuickChat; // 0x01(0x01)
@@ -10984,6 +11127,8 @@ struct FBasicUserSettings {
 	bool bHorizontalGyroscopeInvert; // 0x06(0x01)
 	bool bVerticalGyroscopeInvert; // 0x07(0x01)
 	enum class ESolarDamageTextDisplayModeType CurrentDamageTextDisplayMode; // 0x08(0x01)
+	enum class EBasicSettingBool OpenHighlightMoment; // 0x09(0x01)
+	enum class EBasicSettingBool OpenOutline; // 0x0a(0x01)
 };
 
 // ScriptStruct Solarland.GraphicsUserSettings
@@ -11018,7 +11163,7 @@ struct FLanguageUserSettings {
 };
 
 // ScriptStruct Solarland.SoundUserSettings
-// Size: 0x3c (Inherited: 0x00)
+// Size: 0x60 (Inherited: 0x00)
 struct FSoundUserSettings {
 	struct FConditionValue Sound_Global; // 0x00(0x08)
 	struct FConditionValue Sound_Action; // 0x08(0x08)
@@ -11033,6 +11178,9 @@ struct FSoundUserSettings {
 	int32_t SpeakerLevel; // 0x30(0x04)
 	int32_t ChooseMicIndex; // 0x34(0x04)
 	int32_t ChooseSpeakerIndex; // 0x38(0x04)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct FString MicDeviceID; // 0x40(0x10)
+	struct FString SpeakerDeviceID; // 0x50(0x10)
 };
 
 // ScriptStruct Solarland.ConditionValue
@@ -11091,6 +11239,23 @@ struct FPickupItemData {
 // Size: 0x01 (Inherited: 0x00)
 struct FShakeUserSettings {
 	enum class ESolarShakeMainType ShakeMainStatus; // 0x00(0x01)
+};
+
+// ScriptStruct Solarland.GamepadAdvancedSettings
+// Size: 0x3c (Inherited: 0x00)
+struct FGamepadAdvancedSettings {
+	struct FRangeData ScalerRange; // 0x00(0x08)
+	struct FRangeData SpeedUpScalerRange; // 0x08(0x08)
+	struct FRangeData SpeedUpDelayRange; // 0x10(0x08)
+	struct FRangeData SpeedUpStartRange; // 0x18(0x08)
+	struct FFloatValue ScalerX; // 0x20(0x04)
+	struct FFloatValue ScalerY; // 0x24(0x04)
+	struct FFloatValue SpeedUpScalerX; // 0x28(0x04)
+	struct FFloatValue SpeedUpScalerY; // 0x2c(0x04)
+	struct FFloatValue SpeedUpDelayTime; // 0x30(0x04)
+	struct FFloatValue SpeedUpStartTime; // 0x34(0x04)
+	bool bEnableAdsSpeedUp; // 0x38(0x01)
+	char pad_39[0x3]; // 0x39(0x03)
 };
 
 // ScriptStruct Solarland.GamepadSettings
@@ -11573,7 +11738,8 @@ struct FItemActorDTRow : FTableRowBase {
 	char pad_58[0x8]; // 0x58(0x08)
 	struct FTransform Transform; // 0x60(0x30)
 	float SpawnOffset; // 0x90(0x04)
-	char pad_94[0xc]; // 0x94(0x0c)
+	float NoneMeshFxOffset; // 0x94(0x04)
+	char pad_98[0x8]; // 0x98(0x08)
 };
 
 // ScriptStruct Solarland.ItemResReference
@@ -12166,6 +12332,49 @@ struct FChargingPilePreset {
 	char pad_14C[0x4]; // 0x14c(0x04)
 };
 
+// ScriptStruct Solarland.PlayerActivityHeatRawData
+// Size: 0x50 (Inherited: 0x00)
+struct FPlayerActivityHeatRawData {
+	enum class EPlayerActivityHeatType PlayerActivityHeatType; // 0x00(0x01)
+	char pad_1[0x3]; // 0x01(0x03)
+	float HeatDataTimeStamp; // 0x04(0x04)
+	float ActivityHeatTimeOffset; // 0x08(0x04)
+	char pad_C[0x4]; // 0x0c(0x04)
+	struct FPlayerActivityHeatKillDetail KillDetail; // 0x10(0x40)
+};
+
+// ScriptStruct Solarland.PlayerActivityHeatKillDetail
+// Size: 0x40 (Inherited: 0x00)
+struct FPlayerActivityHeatKillDetail {
+	float KillTime; // 0x00(0x04)
+	struct FVector VictimPosition; // 0x04(0x0c)
+	struct FString KillerID; // 0x10(0x10)
+	struct FString VictimID; // 0x20(0x10)
+	bool IsAbilityKill; // 0x30(0x01)
+	bool IsScopedKill; // 0x31(0x01)
+	bool IsVehicleKill; // 0x32(0x01)
+	bool IsHeadShot; // 0x33(0x01)
+	bool IsAbilityActivated; // 0x34(0x01)
+	char pad_35[0x3]; // 0x35(0x03)
+	int32_t weaponid; // 0x38(0x04)
+	char pad_3C[0x4]; // 0x3c(0x04)
+};
+
+// ScriptStruct Solarland.AntiCheatAimbotPolicyResult
+// Size: 0x20 (Inherited: 0x00)
+struct FAntiCheatAimbotPolicyResult {
+	struct FString PolicyName; // 0x00(0x10)
+	struct FString PolicyRawData; // 0x10(0x10)
+};
+
+// ScriptStruct Solarland.AntiCheatAimbotPolicyParm
+// Size: 0x0c (Inherited: 0x00)
+struct FAntiCheatAimbotPolicyParm {
+	int32_t AimbotSwitch; // 0x00(0x04)
+	int32_t AimbotWindowSize; // 0x04(0x04)
+	int32_t AimbotMaxMutation; // 0x08(0x04)
+};
+
 // ScriptStruct Solarland.ScreenshotManager
 // Size: 0x50 (Inherited: 0x00)
 struct FScreenshotManager {
@@ -12220,10 +12429,27 @@ struct FStreamingDistanceScaleParam : FTableRowBase {
 	float RelativeStreamingDistanceScaleParam; // 0x0c(0x04)
 };
 
+// ScriptStruct Solarland.SolarActorGroupOfReplayCamera
+// Size: 0x18 (Inherited: 0x00)
+struct FSolarActorGroupOfReplayCamera {
+	char pad_0[0x18]; // 0x00(0x18)
+};
+
 // ScriptStruct Solarland.ReplayFindSpectateTargetParams
 // Size: 0x18 (Inherited: 0x00)
 struct FReplayFindSpectateTargetParams {
-	char pad_0[0x18]; // 0x00(0x18)
+	char pad_0[0x10]; // 0x00(0x10)
+	struct ASolarPlayerState* SuggestTarget; // 0x10(0x08)
+};
+
+// ScriptStruct Solarland.PlayerHighlightOverview
+// Size: 0x20 (Inherited: 0x00)
+struct FPlayerHighlightOverview {
+	int32_t KillNum; // 0x00(0x04)
+	int32_t AssistNum; // 0x04(0x04)
+	int32_t Damage; // 0x08(0x04)
+	char pad_C[0x4]; // 0x0c(0x04)
+	struct FString PlayerId; // 0x10(0x10)
 };
 
 // ScriptStruct Solarland.FilteredData
@@ -12551,6 +12777,36 @@ struct FSolarTablesData_Armory : FSolarTablesDataBase {
 	struct FString SilhouetteIcon; // 0x78(0x10)
 };
 
+// ScriptStruct Solarland.SolarTables_AutoDirector
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_AutoDirector : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_AutoDirector> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_AutoDirector
+// Size: 0x28 (Inherited: 0x10)
+struct FSolarTablesData_AutoDirector : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	int32_t SpectateAreaRadius; // 0x14(0x04)
+	int32_t MaxValidDist; // 0x18(0x04)
+	float MinFocusTime; // 0x1c(0x04)
+	float MaxFocusTime; // 0x20(0x04)
+	float PreFreeCameraTime; // 0x24(0x04)
+};
+
+// ScriptStruct Solarland.SolarTables_AutoDirectorActivityScore
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_AutoDirectorActivityScore : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_AutoDirectorActivityScore> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_AutoDirectorActivityScore
+// Size: 0x18 (Inherited: 0x10)
+struct FSolarTablesData_AutoDirectorActivityScore : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	float UIResource; // 0x14(0x04)
+};
+
 // ScriptStruct Solarland.SolarTables_BackpackProperty
 // Size: 0x60 (Inherited: 0x10)
 struct FSolarTables_BackpackProperty : FSolarTablesDataBase {
@@ -12558,7 +12814,7 @@ struct FSolarTables_BackpackProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_BackpackProperty
-// Size: 0x70 (Inherited: 0x10)
+// Size: 0x80 (Inherited: 0x10)
 struct FSolarTablesData_BackpackProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -12572,12 +12828,13 @@ struct FSolarTablesData_BackpackProperty : FSolarTablesDataBase {
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
 	char pad_3C[0x4]; // 0x3c(0x04)
-	struct FString BackpackMeshPath; // 0x40(0x10)
-	struct FString PreviewBpPath; // 0x50(0x10)
-	int32_t StartFrame; // 0x60(0x04)
-	int32_t EndFrame; // 0x64(0x04)
-	float Length; // 0x68(0x04)
-	char pad_6C[0x4]; // 0x6c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	struct FString BackpackMeshPath; // 0x50(0x10)
+	struct FString PreviewBpPath; // 0x60(0x10)
+	int32_t StartFrame; // 0x70(0x04)
+	int32_t EndFrame; // 0x74(0x04)
+	float Length; // 0x78(0x04)
+	char pad_7C[0x4]; // 0x7c(0x04)
 };
 
 // ScriptStruct Solarland.SolarTables_BackpackTrailProperty
@@ -12587,7 +12844,7 @@ struct FSolarTables_BackpackTrailProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_BackpackTrailProperty
-// Size: 0x60 (Inherited: 0x10)
+// Size: 0x70 (Inherited: 0x10)
 struct FSolarTablesData_BackpackTrailProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -12601,8 +12858,9 @@ struct FSolarTablesData_BackpackTrailProperty : FSolarTablesDataBase {
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
 	char pad_3C[0x4]; // 0x3c(0x04)
-	struct FString PreviewTrailPath; // 0x40(0x10)
-	struct FString AssemblingId; // 0x50(0x10)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	struct FString PreviewTrailPath; // 0x50(0x10)
+	struct FString AssemblingId; // 0x60(0x10)
 };
 
 // ScriptStruct Solarland.SolarTables_BattleEndRankSettlement
@@ -12718,7 +12976,7 @@ struct FSolarTables_BpAward : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_BpAward
-// Size: 0x48 (Inherited: 0x10)
+// Size: 0x50 (Inherited: 0x10)
 struct FSolarTablesData_BpAward : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	int32_t BpID; // 0x14(0x04)
@@ -12728,6 +12986,9 @@ struct FSolarTablesData_BpAward : FSolarTablesDataBase {
 	char pad_24[0x4]; // 0x24(0x04)
 	struct TArray<int32_t> FreeAward; // 0x28(0x10)
 	struct TArray<int32_t> PayAward; // 0x38(0x10)
+	bool UnlockExtraTask; // 0x48(0x01)
+	bool BuyLevel; // 0x49(0x01)
+	char pad_4A[0x6]; // 0x4a(0x06)
 };
 
 // ScriptStruct Solarland.SolarTables_CapsuleProperty
@@ -12737,7 +12998,7 @@ struct FSolarTables_CapsuleProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_CapsuleProperty
-// Size: 0x60 (Inherited: 0x10)
+// Size: 0x70 (Inherited: 0x10)
 struct FSolarTablesData_CapsuleProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -12751,8 +13012,9 @@ struct FSolarTablesData_CapsuleProperty : FSolarTablesDataBase {
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
 	char pad_3C[0x4]; // 0x3c(0x04)
-	struct FString CapsuleBPPath; // 0x40(0x10)
-	struct FString PreviewBpPath; // 0x50(0x10)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	struct FString CapsuleBPPath; // 0x50(0x10)
+	struct FString PreviewBpPath; // 0x60(0x10)
 };
 
 // ScriptStruct Solarland.SolarTables_CaseToggleAlphabet
@@ -12895,6 +13157,25 @@ struct FSolarTablesData_ChestSpawnGroup : FSolarTablesDataBase {
 	struct TArray<int32_t> ChestGroup; // 0x18(0x10)
 };
 
+// ScriptStruct Solarland.SolarTables_CircularCameras
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_CircularCameras : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_CircularCameras> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_CircularCameras
+// Size: 0x30 (Inherited: 0x10)
+struct FSolarTablesData_CircularCameras : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	int32_t MiniDistance; // 0x14(0x04)
+	float BorderRatio; // 0x18(0x04)
+	int32_t FOV; // 0x1c(0x04)
+	int32_t Pitch; // 0x20(0x04)
+	int32_t InitAngleWithMainDir; // 0x24(0x04)
+	float BlendAlpha; // 0x28(0x04)
+	float AngularSpeed; // 0x2c(0x04)
+};
+
 // ScriptStruct Solarland.SolarTables_ClanFlag
 // Size: 0x60 (Inherited: 0x10)
 struct FSolarTables_ClanFlag : FSolarTablesDataBase {
@@ -12908,6 +13189,38 @@ struct FSolarTablesData_ClanFlag : FSolarTablesDataBase {
 	char pad_14[0x4]; // 0x14(0x04)
 	struct FString FlagIcon; // 0x18(0x10)
 	struct FString WebIcon; // 0x28(0x10)
+};
+
+// ScriptStruct Solarland.SolarTables_Dance
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_Dance : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_Dance> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_Dance
+// Size: 0x80 (Inherited: 0x10)
+struct FSolarTablesData_Dance : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	struct FSolarTablesLocalText Name; // 0x14(0x04)
+	struct FString Icon; // 0x18(0x10)
+	struct FSolarTablesLocalText Info; // 0x28(0x04)
+	int32_t Quality; // 0x2c(0x04)
+	int32_t ItemClass; // 0x30(0x04)
+	int32_t ItemType; // 0x34(0x04)
+	bool ShowInStorage; // 0x38(0x01)
+	bool IfUse; // 0x39(0x01)
+	bool IfRecycle; // 0x3a(0x01)
+	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	int32_t LoopTime; // 0x50(0x04)
+	char pad_54[0x4]; // 0x54(0x04)
+	struct FString BlueprintPath; // 0x58(0x10)
+	int32_t ShopID; // 0x68(0x04)
+	bool IfDefault; // 0x6c(0x01)
+	bool IfShow; // 0x6d(0x01)
+	char pad_6E[0x2]; // 0x6e(0x02)
+	struct FString BeginTime; // 0x70(0x10)
 };
 
 // ScriptStruct Solarland.SolarTables_DayAndNight
@@ -12952,7 +13265,7 @@ struct FSolarTables_Emote : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_Emote
-// Size: 0x90 (Inherited: 0x10)
+// Size: 0xa8 (Inherited: 0x10)
 struct FSolarTablesData_Emote : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -12965,15 +13278,18 @@ struct FSolarTablesData_Emote : FSolarTablesDataBase {
 	bool IfUse; // 0x39(0x01)
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
-	int32_t EmoteType; // 0x3c(0x04)
-	struct FString EmoteBlueprintPath; // 0x40(0x10)
-	struct FString EmoteResourcePath; // 0x50(0x10)
-	float EmoteDuration; // 0x60(0x04)
-	char pad_64[0x4]; // 0x64(0x04)
-	struct FString EmoteAppearSound; // 0x68(0x10)
-	struct FString EmoteSound; // 0x78(0x10)
-	int32_t ShopID; // 0x88(0x04)
-	char pad_8C[0x4]; // 0x8c(0x04)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	int32_t EmoteType; // 0x50(0x04)
+	char pad_54[0x4]; // 0x54(0x04)
+	struct FString EmoteBlueprintPath; // 0x58(0x10)
+	struct FString EmoteResourcePath; // 0x68(0x10)
+	float EmoteDuration; // 0x78(0x04)
+	char pad_7C[0x4]; // 0x7c(0x04)
+	struct FString EmoteAppearSound; // 0x80(0x10)
+	struct FString EmoteSound; // 0x90(0x10)
+	int32_t ShopID; // 0xa0(0x04)
+	char pad_A4[0x4]; // 0xa4(0x04)
 };
 
 // ScriptStruct Solarland.SolarTables_EnergyProperty
@@ -13374,6 +13690,39 @@ struct FSolarTablesData_GunProperty : FSolarTablesDataBase {
 	char pad_A4[0x4]; // 0xa4(0x04)
 };
 
+// ScriptStruct Solarland.SolarTables_HeroPowerFormula
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_HeroPowerFormula : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_HeroPowerFormula> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_HeroPowerFormula
+// Size: 0x28 (Inherited: 0x10)
+struct FSolarTablesData_HeroPowerFormula : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	int32_t MatchRuleID; // 0x14(0x04)
+	int32_t Battlerank; // 0x18(0x04)
+	int32_t RankScore; // 0x1c(0x04)
+	float KillRealConfig; // 0x20(0x04)
+	float KillAiConfig; // 0x24(0x04)
+};
+
+// ScriptStruct Solarland.SolarTables_HotSpot
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_HotSpot : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_HotSpot> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_HotSpot
+// Size: 0x30 (Inherited: 0x10)
+struct FSolarTablesData_HotSpot : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	char pad_14[0x4]; // 0x14(0x04)
+	struct FString UIResource; // 0x18(0x10)
+	float JumpTime; // 0x28(0x04)
+	char pad_2C[0x4]; // 0x2c(0x04)
+};
+
 // ScriptStruct Solarland.SolarTables_InputAction
 // Size: 0x60 (Inherited: 0x10)
 struct FSolarTables_InputAction : FSolarTablesDataBase {
@@ -13434,7 +13783,7 @@ struct FSolarTables_Item : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_Item
-// Size: 0x40 (Inherited: 0x10)
+// Size: 0x50 (Inherited: 0x10)
 struct FSolarTablesData_Item : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -13448,6 +13797,7 @@ struct FSolarTablesData_Item : FSolarTablesDataBase {
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
 	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
 };
 
 // ScriptStruct Solarland.SolarTables_ItemBehavior
@@ -13936,6 +14286,25 @@ struct FSolarTablesData_Localization_Uncategorized : FSolarTablesDataBase {
 	struct FString Op; // 0x158(0x10)
 };
 
+// ScriptStruct Solarland.SolarTables_LookAtCameras
+// Size: 0x60 (Inherited: 0x10)
+struct FSolarTables_LookAtCameras : FSolarTablesDataBase {
+	struct TMap<int32_t, struct FSolarTablesData_LookAtCameras> Data; // 0x10(0x50)
+};
+
+// ScriptStruct Solarland.SolarTablesData_LookAtCameras
+// Size: 0x30 (Inherited: 0x10)
+struct FSolarTablesData_LookAtCameras : FSolarTablesDataBase {
+	int32_t ID; // 0x10(0x04)
+	int32_t MiniDistance; // 0x14(0x04)
+	float BorderRatio; // 0x18(0x04)
+	int32_t FOV; // 0x1c(0x04)
+	int32_t Pitch; // 0x20(0x04)
+	int32_t InitAngleWithMainDir; // 0x24(0x04)
+	float BlendAlpha; // 0x28(0x04)
+	char pad_2C[0x4]; // 0x2c(0x04)
+};
+
 // ScriptStruct Solarland.SolarTables_MapMarkIcon
 // Size: 0x60 (Inherited: 0x10)
 struct FSolarTables_MapMarkIcon : FSolarTablesDataBase {
@@ -13991,7 +14360,7 @@ struct FSolarTables_MaterialProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_MaterialProperty
-// Size: 0x50 (Inherited: 0x10)
+// Size: 0x68 (Inherited: 0x10)
 struct FSolarTablesData_MaterialProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -14004,12 +14373,15 @@ struct FSolarTablesData_MaterialProperty : FSolarTablesDataBase {
 	bool IfUse; // 0x39(0x01)
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
-	int32_t Prize; // 0x3c(0x04)
-	bool IfCollection; // 0x40(0x01)
-	char pad_41[0x3]; // 0x41(0x03)
-	int32_t Level; // 0x44(0x04)
-	struct FSolarTablesLocalText CoverName; // 0x48(0x04)
-	int32_t Substitution; // 0x4c(0x04)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	int32_t Prize; // 0x50(0x04)
+	bool IfCollection; // 0x54(0x01)
+	char pad_55[0x3]; // 0x55(0x03)
+	int32_t Level; // 0x58(0x04)
+	struct FSolarTablesLocalText CoverName; // 0x5c(0x04)
+	int32_t Substitution; // 0x60(0x04)
+	char pad_64[0x4]; // 0x64(0x04)
 };
 
 // ScriptStruct Solarland.SolarTables_NameCardBackground
@@ -14285,14 +14657,14 @@ struct FSolarTablesData_RankMatch : FSolarTablesDataBase {
 	bool EnableTeamManager; // 0x34(0x01)
 	char pad_35[0x3]; // 0x35(0x03)
 	struct TArray<int32_t> MLApplication; // 0x38(0x10)
-	int32_t MaxWait; // 0x48(0x04)
-	int32_t StopMatchTime; // 0x4c(0x04)
-	bool HasAITeammate; // 0x50(0x01)
-	bool AIAccompany; // 0x51(0x01)
-	char pad_52[0x2]; // 0x52(0x02)
-	int32_t AIAccompanyTimeline; // 0x54(0x04)
-	int32_t MinPlayer; // 0x58(0x04)
-	char pad_5C[0x4]; // 0x5c(0x04)
+	int32_t MLApply; // 0x48(0x04)
+	int32_t MaxWait; // 0x4c(0x04)
+	int32_t StopMatchTime; // 0x50(0x04)
+	bool HasAITeammate; // 0x54(0x01)
+	bool AIAccompany; // 0x55(0x01)
+	char pad_56[0x2]; // 0x56(0x02)
+	int32_t AIAccompanyTimeline; // 0x58(0x04)
+	int32_t MinPlayer; // 0x5c(0x04)
 };
 
 // ScriptStruct Solarland.SolarTables_Rescue
@@ -14421,7 +14793,7 @@ struct FSolarTablesData_Skin : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTables_Tables
-// Size: 0x28e8 (Inherited: 0x00)
+// Size: 0x2b88 (Inherited: 0x00)
 struct FSolarTables_Tables {
 	char pad_0[0x8]; // 0x00(0x08)
 	struct FSolarTables_AccountFixedExp AccountFixedExp; // 0x08(0x60)
@@ -14457,82 +14829,89 @@ struct FSolarTables_Tables {
 	struct FSolarTables_GameTimeLine GameTimeLine; // 0xb48(0x60)
 	struct FSolarTables_GlobalOutcome GlobalOutcome; // 0xba8(0x60)
 	struct FSolarTables_GlobalSensitivity GlobalSensitivity; // 0xc08(0x60)
-	struct FSolarTables_InputAction InputAction; // 0xc68(0x60)
-	struct FSolarTables_InputMapping InputMapping; // 0xcc8(0x60)
-	struct FSolarTables_Item Item; // 0xd28(0x60)
-	struct FSolarTables_BackpackProperty BackpackProperty; // 0xd88(0x60)
-	struct FSolarTables_BackpackTrailProperty BackpackTrailProperty; // 0xde8(0x60)
-	struct FSolarTables_CapsuleProperty CapsuleProperty; // 0xe48(0x60)
-	struct FSolarTables_Emote Emote; // 0xea8(0x60)
-	struct FSolarTables_MaterialProperty MaterialProperty; // 0xf08(0x60)
-	struct FSolarTables_VehicleSkinProperty VehicleSkinProperty; // 0xf68(0x60)
-	struct FSolarTables_WeaponSkinProperty WeaponSkinProperty; // 0xfc8(0x60)
-	struct FSolarTables_ItemCustomType ItemCustomType; // 0x1028(0x60)
-	struct FSolarTables_ItemInBattle ItemInBattle; // 0x1088(0x60)
-	struct FSolarTables_ArmorProperty ArmorProperty; // 0x10e8(0x60)
-	struct FSolarTables_Chest Chest; // 0x1148(0x60)
-	struct FSolarTables_EnergyProperty EnergyProperty; // 0x11a8(0x60)
-	struct FSolarTables_ExtraEnergyProperty ExtraEnergyProperty; // 0x1208(0x60)
-	struct FSolarTables_GunProperty GunProperty; // 0x1268(0x60)
-	struct FSolarTables_ItemBehavior ItemBehavior; // 0x12c8(0x60)
-	struct FSolarTables_ItemWeaponParts ItemWeaponParts; // 0x1328(0x60)
-	struct FSolarTables_JetPackModuleProperty JetPackModuleProperty; // 0x1388(0x60)
-	struct FSolarTables_ShieldProperty ShieldProperty; // 0x13e8(0x60)
-	struct FSolarTables_ItemQuality ItemQuality; // 0x1448(0x60)
-	struct FSolarTables_ItemSound ItemSound; // 0x14a8(0x60)
-	struct FSolarTables_LobbyAutoDownload LobbyAutoDownload; // 0x1508(0x60)
-	struct FSolarTables_LanguageSwitcher LanguageSwitcher; // 0x1568(0x60)
-	struct FSolarTables_Localization Localization; // 0x15c8(0x60)
-	struct FSolarTables_Localization_BattleUI Localization_BattleUI; // 0x1628(0x60)
-	struct FSolarTables_Localization_EventSystem Localization_EventSystem; // 0x1688(0x60)
-	struct FSolarTables_Localization_General Localization_General; // 0x16e8(0x60)
-	struct FSolarTables_Localization_Heroes Localization_Heroes; // 0x1748(0x60)
-	struct FSolarTables_Localization_Item Localization_Item; // 0x17a8(0x60)
-	struct FSolarTables_Localization_Tournament Localization_Tournament; // 0x1808(0x60)
-	struct FSolarTables_Localization_Uncategorized Localization_Uncategorized; // 0x1868(0x60)
-	struct FSolarTables_GameMap GameMap; // 0x18c8(0x60)
-	struct FSolarTables_MapMarkIcon MapMarkIcon; // 0x1928(0x60)
-	struct FSolarTables_MatchRule MatchRule; // 0x1988(0x60)
-	struct FSolarTables_RankMatch RankMatch; // 0x19e8(0x60)
-	struct FSolarTables_NameCardBackground NameCardBackground; // 0x1a48(0x60)
-	struct FSolarTables_NameCardPose NameCardPose; // 0x1aa8(0x60)
-	struct FSolarTables_ObGift ObGift; // 0x1b08(0x60)
-	struct FSolarTables_Outcome Outcome; // 0x1b68(0x60)
-	struct FSolarTables_OutcomeContent OutcomeContent; // 0x1bc8(0x60)
-	struct FSolarTables_PickupPriorityItem PickupPriorityItem; // 0x1c28(0x60)
-	struct FSolarTables_PickupPriorityWeaponPart PickupPriorityWeaponPart; // 0x1c88(0x60)
-	struct FSolarTables_CharacterVoiceover CharacterVoiceover; // 0x1ce8(0x60)
-	struct FSolarTables_QuickChat QuickChat; // 0x1d48(0x60)
-	struct FSolarTables_QuickVoice QuickVoice; // 0x1da8(0x60)
-	struct FSolarTables_VODownload VODownload; // 0x1e08(0x60)
-	struct FSolarTables_RankLevel RankLevel; // 0x1e68(0x60)
-	struct FSolarTables_Rescue Rescue; // 0x1ec8(0x60)
-	struct FSolarTables_Skin Skin; // 0x1f28(0x60)
-	struct FSolarTables_Achievement Achievement; // 0x1f88(0x60)
-	struct FSolarTables_TaskProgress TaskProgress; // 0x1fe8(0x60)
-	struct FSolarTables_TaskSystem TaskSystem; // 0x2048(0x60)
-	struct FSolarTables_PlayerOperationListLayout PlayerOperationListLayout; // 0x20a8(0x60)
-	struct FSolarTables_Variables Variables; // 0x2108(0x60)
-	struct FSolarTables_Vehicle Vehicle; // 0x2168(0x60)
-	struct FSolarTables_VehicleSkin VehicleSkin; // 0x21c8(0x60)
-	struct FSolarTables_VehicleType VehicleType; // 0x2228(0x60)
-	struct FSolarTables_VehicleSpawn VehicleSpawn; // 0x2288(0x60)
-	struct FSolarTables_VehicleSpawnGroup VehicleSpawnGroup; // 0x22e8(0x60)
-	struct FSolarTables_WarmGame WarmGame; // 0x2348(0x60)
-	struct FSolarTables_WarmGameMode WarmGameMode; // 0x23a8(0x60)
-	struct FSolarTables_WeaponDamage WeaponDamage; // 0x2408(0x60)
-	struct FSolarTables_Weapon Weapon; // 0x2468(0x60)
-	struct FSolarTables_WeaponAmmo WeaponAmmo; // 0x24c8(0x60)
-	struct FSolarTables_WeaponBattleUpgrade WeaponBattleUpgrade; // 0x2528(0x60)
-	struct FSolarTables_WeaponDefault WeaponDefault; // 0x2588(0x60)
-	struct FSolarTables_WeaponKillTip WeaponKillTip; // 0x25e8(0x60)
-	struct FSolarTables_WeaponParts WeaponParts; // 0x2648(0x60)
-	struct FSolarTables_WeaponPartsOp WeaponPartsOp; // 0x26a8(0x60)
-	struct FSolarTables_WeaponQuality WeaponQuality; // 0x2708(0x60)
-	struct FSolarTables_SecondMode SecondMode; // 0x2768(0x60)
-	struct FSolarTables_WeaponSkin WeaponSkin; // 0x27c8(0x60)
-	struct FSolarTables_WeaponSound WeaponSound; // 0x2828(0x60)
-	struct FSolarTables_WeaponStatu WeaponStatu; // 0x2888(0x60)
+	struct FSolarTables_HeroPowerFormula HeroPowerFormula; // 0xc68(0x60)
+	struct FSolarTables_InputAction InputAction; // 0xcc8(0x60)
+	struct FSolarTables_InputMapping InputMapping; // 0xd28(0x60)
+	struct FSolarTables_Item Item; // 0xd88(0x60)
+	struct FSolarTables_BackpackProperty BackpackProperty; // 0xde8(0x60)
+	struct FSolarTables_BackpackTrailProperty BackpackTrailProperty; // 0xe48(0x60)
+	struct FSolarTables_CapsuleProperty CapsuleProperty; // 0xea8(0x60)
+	struct FSolarTables_Dance Dance; // 0xf08(0x60)
+	struct FSolarTables_Emote Emote; // 0xf68(0x60)
+	struct FSolarTables_MaterialProperty MaterialProperty; // 0xfc8(0x60)
+	struct FSolarTables_VehicleSkinProperty VehicleSkinProperty; // 0x1028(0x60)
+	struct FSolarTables_WeaponSkinProperty WeaponSkinProperty; // 0x1088(0x60)
+	struct FSolarTables_ItemCustomType ItemCustomType; // 0x10e8(0x60)
+	struct FSolarTables_ItemInBattle ItemInBattle; // 0x1148(0x60)
+	struct FSolarTables_ArmorProperty ArmorProperty; // 0x11a8(0x60)
+	struct FSolarTables_Chest Chest; // 0x1208(0x60)
+	struct FSolarTables_EnergyProperty EnergyProperty; // 0x1268(0x60)
+	struct FSolarTables_ExtraEnergyProperty ExtraEnergyProperty; // 0x12c8(0x60)
+	struct FSolarTables_GunProperty GunProperty; // 0x1328(0x60)
+	struct FSolarTables_ItemBehavior ItemBehavior; // 0x1388(0x60)
+	struct FSolarTables_ItemWeaponParts ItemWeaponParts; // 0x13e8(0x60)
+	struct FSolarTables_JetPackModuleProperty JetPackModuleProperty; // 0x1448(0x60)
+	struct FSolarTables_ShieldProperty ShieldProperty; // 0x14a8(0x60)
+	struct FSolarTables_ItemQuality ItemQuality; // 0x1508(0x60)
+	struct FSolarTables_ItemSound ItemSound; // 0x1568(0x60)
+	struct FSolarTables_LobbyAutoDownload LobbyAutoDownload; // 0x15c8(0x60)
+	struct FSolarTables_LanguageSwitcher LanguageSwitcher; // 0x1628(0x60)
+	struct FSolarTables_Localization Localization; // 0x1688(0x60)
+	struct FSolarTables_Localization_BattleUI Localization_BattleUI; // 0x16e8(0x60)
+	struct FSolarTables_Localization_EventSystem Localization_EventSystem; // 0x1748(0x60)
+	struct FSolarTables_Localization_General Localization_General; // 0x17a8(0x60)
+	struct FSolarTables_Localization_Heroes Localization_Heroes; // 0x1808(0x60)
+	struct FSolarTables_Localization_Item Localization_Item; // 0x1868(0x60)
+	struct FSolarTables_Localization_Tournament Localization_Tournament; // 0x18c8(0x60)
+	struct FSolarTables_Localization_Uncategorized Localization_Uncategorized; // 0x1928(0x60)
+	struct FSolarTables_GameMap GameMap; // 0x1988(0x60)
+	struct FSolarTables_MapMarkIcon MapMarkIcon; // 0x19e8(0x60)
+	struct FSolarTables_MatchRule MatchRule; // 0x1a48(0x60)
+	struct FSolarTables_RankMatch RankMatch; // 0x1aa8(0x60)
+	struct FSolarTables_NameCardBackground NameCardBackground; // 0x1b08(0x60)
+	struct FSolarTables_NameCardPose NameCardPose; // 0x1b68(0x60)
+	struct FSolarTables_ObGift ObGift; // 0x1bc8(0x60)
+	struct FSolarTables_Outcome Outcome; // 0x1c28(0x60)
+	struct FSolarTables_OutcomeContent OutcomeContent; // 0x1c88(0x60)
+	struct FSolarTables_PickupPriorityItem PickupPriorityItem; // 0x1ce8(0x60)
+	struct FSolarTables_PickupPriorityWeaponPart PickupPriorityWeaponPart; // 0x1d48(0x60)
+	struct FSolarTables_CharacterVoiceover CharacterVoiceover; // 0x1da8(0x60)
+	struct FSolarTables_QuickChat QuickChat; // 0x1e08(0x60)
+	struct FSolarTables_QuickVoice QuickVoice; // 0x1e68(0x60)
+	struct FSolarTables_VODownload VODownload; // 0x1ec8(0x60)
+	struct FSolarTables_RankLevel RankLevel; // 0x1f28(0x60)
+	struct FSolarTables_AutoDirector AutoDirector; // 0x1f88(0x60)
+	struct FSolarTables_AutoDirectorActivityScore AutoDirectorActivityScore; // 0x1fe8(0x60)
+	struct FSolarTables_CircularCameras CircularCameras; // 0x2048(0x60)
+	struct FSolarTables_HotSpot HotSpot; // 0x20a8(0x60)
+	struct FSolarTables_LookAtCameras LookAtCameras; // 0x2108(0x60)
+	struct FSolarTables_Rescue Rescue; // 0x2168(0x60)
+	struct FSolarTables_Skin Skin; // 0x21c8(0x60)
+	struct FSolarTables_Achievement Achievement; // 0x2228(0x60)
+	struct FSolarTables_TaskProgress TaskProgress; // 0x2288(0x60)
+	struct FSolarTables_TaskSystem TaskSystem; // 0x22e8(0x60)
+	struct FSolarTables_PlayerOperationListLayout PlayerOperationListLayout; // 0x2348(0x60)
+	struct FSolarTables_Variables Variables; // 0x23a8(0x60)
+	struct FSolarTables_Vehicle Vehicle; // 0x2408(0x60)
+	struct FSolarTables_VehicleSkin VehicleSkin; // 0x2468(0x60)
+	struct FSolarTables_VehicleType VehicleType; // 0x24c8(0x60)
+	struct FSolarTables_VehicleSpawn VehicleSpawn; // 0x2528(0x60)
+	struct FSolarTables_VehicleSpawnGroup VehicleSpawnGroup; // 0x2588(0x60)
+	struct FSolarTables_WarmGame WarmGame; // 0x25e8(0x60)
+	struct FSolarTables_WarmGameMode WarmGameMode; // 0x2648(0x60)
+	struct FSolarTables_WeaponDamage WeaponDamage; // 0x26a8(0x60)
+	struct FSolarTables_Weapon Weapon; // 0x2708(0x60)
+	struct FSolarTables_WeaponAmmo WeaponAmmo; // 0x2768(0x60)
+	struct FSolarTables_WeaponBattleUpgrade WeaponBattleUpgrade; // 0x27c8(0x60)
+	struct FSolarTables_WeaponDefault WeaponDefault; // 0x2828(0x60)
+	struct FSolarTables_WeaponKillTip WeaponKillTip; // 0x2888(0x60)
+	struct FSolarTables_WeaponParts WeaponParts; // 0x28e8(0x60)
+	struct FSolarTables_WeaponPartsOp WeaponPartsOp; // 0x2948(0x60)
+	struct FSolarTables_WeaponQuality WeaponQuality; // 0x29a8(0x60)
+	struct FSolarTables_SecondMode SecondMode; // 0x2a08(0x60)
+	struct FSolarTables_WeaponSkin WeaponSkin; // 0x2a68(0x60)
+	struct FSolarTables_WeaponSound WeaponSound; // 0x2ac8(0x60)
+	struct FSolarTables_WeaponStatu WeaponStatu; // 0x2b28(0x60)
 };
 
 // ScriptStruct Solarland.SolarTables_WeaponStatu
@@ -14652,7 +15031,7 @@ struct FSolarTables_WeaponSkin : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_WeaponSkin
-// Size: 0x78 (Inherited: 0x10)
+// Size: 0x80 (Inherited: 0x10)
 struct FSolarTablesData_WeaponSkin : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	int32_t WeaponSkinType; // 0x14(0x04)
@@ -14664,11 +15043,12 @@ struct FSolarTablesData_WeaponSkin : FSolarTablesDataBase {
 	int32_t JumpPage; // 0x44(0x04)
 	struct FString KillBroadcast; // 0x48(0x10)
 	int32_t ShopPropertyid; // 0x58(0x04)
-	bool DisplayInWeaponry; // 0x5c(0x01)
-	char pad_5D[0x3]; // 0x5d(0x03)
-	struct FString LobbyChunkDir; // 0x60(0x10)
-	int32_t ChunkID; // 0x70(0x04)
-	int32_t AIRandomWeight; // 0x74(0x04)
+	int32_t ItemID; // 0x5c(0x04)
+	bool DisplayInWeaponry; // 0x60(0x01)
+	char pad_61[0x7]; // 0x61(0x07)
+	struct FString LobbyChunkDir; // 0x68(0x10)
+	int32_t ChunkID; // 0x78(0x04)
+	int32_t AIRandomWeight; // 0x7c(0x04)
 };
 
 // ScriptStruct Solarland.SolarTables_WeaponQuality
@@ -15252,7 +15632,7 @@ struct FSolarTables_WeaponSkinProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_WeaponSkinProperty
-// Size: 0x40 (Inherited: 0x10)
+// Size: 0x68 (Inherited: 0x10)
 struct FSolarTablesData_WeaponSkinProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -15265,7 +15645,11 @@ struct FSolarTablesData_WeaponSkinProperty : FSolarTablesDataBase {
 	bool IfUse; // 0x39(0x01)
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
-	int32_t WeaponSkinID; // 0x3c(0x04)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	int32_t WeaponSkinID; // 0x50(0x04)
+	char pad_54[0x4]; // 0x54(0x04)
+	struct FString WeaponIcon_M; // 0x58(0x10)
 };
 
 // ScriptStruct Solarland.SolarTables_VehicleSkinProperty
@@ -15275,7 +15659,7 @@ struct FSolarTables_VehicleSkinProperty : FSolarTablesDataBase {
 };
 
 // ScriptStruct Solarland.SolarTablesData_VehicleSkinProperty
-// Size: 0x60 (Inherited: 0x10)
+// Size: 0x78 (Inherited: 0x10)
 struct FSolarTablesData_VehicleSkinProperty : FSolarTablesDataBase {
 	int32_t ID; // 0x10(0x04)
 	struct FSolarTablesLocalText Name; // 0x14(0x04)
@@ -15288,12 +15672,15 @@ struct FSolarTablesData_VehicleSkinProperty : FSolarTablesDataBase {
 	bool IfUse; // 0x39(0x01)
 	bool IfRecycle; // 0x3a(0x01)
 	enum class ESolarTablesEnum_StackType StackType; // 0x3b(0x01)
-	int32_t VehicleSkinId; // 0x3c(0x04)
-	int32_t VehicleSkinAquiredThre; // 0x40(0x04)
-	int32_t JumpPage; // 0x44(0x04)
-	struct FString KillBroadcast; // 0x48(0x10)
-	bool DisplayInVehiclery; // 0x58(0x01)
-	char pad_59[0x7]; // 0x59(0x07)
+	char pad_3C[0x4]; // 0x3c(0x04)
+	struct TArray<int32_t> JumpLink; // 0x40(0x10)
+	int32_t VehicleSkinId; // 0x50(0x04)
+	int32_t VehicleSkinAquiredThre; // 0x54(0x04)
+	int32_t JumpPage; // 0x58(0x04)
+	char pad_5C[0x4]; // 0x5c(0x04)
+	struct FString KillBroadcast; // 0x60(0x10)
+	bool DisplayInVehiclery; // 0x70(0x01)
+	char pad_71[0x7]; // 0x71(0x07)
 };
 
 // ScriptStruct Solarland.SolarTables_UnitCharacter
@@ -15352,7 +15739,7 @@ struct FSolarTablesData_UnitCharacter : FSolarTablesDataBase {
 	int32_t CrouchJogSpeed; // 0x14c(0x04)
 	int32_t CrouchRunSpeed; // 0x150(0x04)
 	int32_t CrouchSprintSpeed; // 0x154(0x04)
-	int32_t ShopPropertyid; // 0x158(0x04)
+	int32_t ItemID; // 0x158(0x04)
 	float BackpackScale; // 0x15c(0x04)
 	int32_t CharacterSize; // 0x160(0x04)
 	int32_t BotConfigID; // 0x164(0x04)

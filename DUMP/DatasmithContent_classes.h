@@ -212,9 +212,9 @@ struct UDatasmithCineCameraComponentTemplate : UDatasmithObjectTemplate {
 // Size: 0x28 (Inherited: 0x28)
 struct UDatasmithContentBlueprintLibrary : UBlueprintFunctionLibrary {
 
-	struct FString GetDatasmithUserDataValueForKey(struct UObject* Object, struct FName Key); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x913940
-	void GetDatasmithUserDataKeysAndValuesForValue(struct UObject* Object, struct FString StringToMatch, struct TArray<struct FName>& OutKeys, struct TArray<struct FString>& OutValues); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x913780
-	struct UDatasmithAssetUserData* GetDatasmithUserData(struct UObject* Object); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x9136f0
+	struct FString GetDatasmithUserDataValueForKey(struct UObject* Object, struct FName Key); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataValueForKey // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x917320
+	void GetDatasmithUserDataKeysAndValuesForValue(struct UObject* Object, struct FString StringToMatch, struct TArray<struct FName>& OutKeys, struct TArray<struct FString>& OutValues); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserDataKeysAndValuesForValue // (Final|Native|Static|Public|HasOutParms|BlueprintCallable) // @ game+0x917160
+	struct UDatasmithAssetUserData* GetDatasmithUserData(struct UObject* Object); // Function DatasmithContent.DatasmithContentBlueprintLibrary.GetDatasmithUserData // (Final|Native|Static|Public|BlueprintCallable) // @ game+0x9170d0
 };
 
 // Class DatasmithContent.DatasmithCustomActionBase
@@ -228,7 +228,7 @@ struct UDatasmithCustomActionBase : UObject {
 struct ADatasmithImportedSequencesActor : AActor {
 	struct TArray<struct ULevelSequence*> ImportedSequences; // 0x228(0x10)
 
-	void PlayLevelSequence(struct ULevelSequence* SequenceToPlay); // Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence // (Final|Native|Public|BlueprintCallable) // @ game+0x913a50
+	void PlayLevelSequence(struct ULevelSequence* SequenceToPlay); // Function DatasmithContent.DatasmithImportedSequencesActor.PlayLevelSequence // (Final|Native|Public|BlueprintCallable) // @ game+0x917430
 };
 
 // Class DatasmithContent.DatasmithOptionsBase

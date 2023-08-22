@@ -27,9 +27,9 @@ struct UEOSSettings : UObject {
 };
 
 // Class OnlineSubsystemEOS.NetConnectionEOS
-// Size: 0x1bb0 (Inherited: 0x1ba8)
+// Size: 0x1bb8 (Inherited: 0x1bb0)
 struct UNetConnectionEOS : UIpConnection {
-	char pad_1BA8[0x8]; // 0x1ba8(0x08)
+	char pad_1BB0[0x8]; // 0x1bb0(0x08)
 };
 
 // Class OnlineSubsystemEOS.NetDriverEOS
